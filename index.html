@@ -242,6 +242,7 @@
   let nivData      = {};
   let nkjvData     = {};
   let commentary   = {};
+  let tyndaleData  = {};
   let activeBible  = 'niv';
 
   function todayStr() {
@@ -277,18 +278,20 @@
 
   // ── Load data ────────────────────────────────────────────────────────────
   async function loadData() {
-    const [rotaRes, zhRes, commRes, nivRes, nkjvRes] = await Promise.all([
+    const [rotaRes, zhRes, commRes, nivRes, nkjvRes, tynRes] = await Promise.all([
       fetch('data/rota.json'),
       fetch('data/chinese_bible.json'),
       fetch('data/commentary.json'),
       fetch('data/niv.json'),
       fetch('data/nkjv.json'),
+      fetch('data/tyndale_pages.json'),
     ]);
     rota        = await rotaRes.json();
     chineseData = await zhRes.json();
     commentary  = await commRes.json();
     nivData     = await nivRes.json();
     nkjvData    = await nkjvRes.json();
+    tyndaleData = await tynRes.json();
   }
 
   // ── Render ───────────────────────────────────────────────────────────────
@@ -343,8 +346,9 @@
     const themesEn = (comm.themes_en || []).map(t => `<span class="theme-tag">${t}</span>`).join('');
     const themesZh = (comm.themes_zh || []).map(t => `<span class="theme-tag zh-font">${t}</span>`).join('');
 
-    const bookKey = entry.ref.split('.')[0];
-    const chStr   = String(entry.chapter);
+    const bookKey     = entry.ref.split('.')[0];
+    const chStr       = String(entry.chapter);
+    const tyndaleURL  = getTyndaleURL(bookKey, entry.chapter);
 
     function renderVerses(source, cls='') {
       return ((source[bookKey] || {})[chStr] || [])
@@ -398,15 +402,6 @@
             <p data-lang="zh" class="zh-font">全书动画概览，帮助理解今日章节背景。</p>
           </div>
         </a>
-        <a class="resource-card" href="https://www.blueletterbible.org/niv/${refToBlueLetterPath(entry.ref)}" target="_blank">
-          <span class="resource-icon">📖</span>
-          <div>
-            <h3 data-lang="en">Blue Letter Bible</h3>
-            <h3 data-lang="zh" class="zh-font">蓝字圣经</h3>
-            <p data-lang="en">Interlinear Greek, commentaries, cross-references.</p>
-            <p data-lang="zh" class="zh-font">希腊文对照、注释及经文交叉参考。</p>
-          </div>
-        </a>
         <a class="resource-card" href="https://www.gotquestions.org/${gqBookSlug(entry.book)}.html" target="_blank">
           <span class="resource-icon">📘</span>
           <div>
@@ -425,6 +420,16 @@
             <p data-lang="zh" class="zh-font">关于今日章节的问答注释。</p>
           </div>
         </a>
+        ${tyndaleURL ? `
+        <a class="resource-card" href="${tyndaleURL}" target="_blank">
+          <span class="resource-icon">📚</span>
+          <div>
+            <h3 data-lang="en">Tyndale Commentary — ${entry.book} ${entry.chapter}</h3>
+            <h3 data-lang="zh" class="zh-font">丁道尔注释 — ${entry.bookZh}第${chapterNumZh(entry.chapter)}章</h3>
+            <p data-lang="en">Open the Tyndale commentary PDF, right at this chapter.</p>
+            <p data-lang="zh" class="zh-font">直接打开丁道尔圣经注释PDF，定位至本章。</p>
+          </div>
+        </a>` : ''}
       </div>`;
 
     applyUILang();
@@ -445,6 +450,14 @@
       'Matthew': 'Gospel-of-Matthew',
     };
     return overrides[book] || 'Book-of-' + book.replace(/ /g, '-');
+  }
+
+  function getTyndaleURL(bookKey, chapter) {
+    const entry = tyndaleData[bookKey];
+    if (!entry) return null;
+    const pg = (entry.pages || {})[String(chapter)];
+    if (!pg) return null;
+    return entry.pdf + '#page=' + pg;
   }
 
   function refToBlueLetterPath(ref) {

@@ -1,18 +1,1366 @@
 {
-  "HEB.1":  { "en": "The letter opens with a majestic declaration: Jesus is the ultimate and final word of God — superior to angels, the exact imprint of God's nature, sustaining the universe by his powerful word.", "zh": "书信以宏大的宣告开篇：耶稣是神最终极的话语——远超天使，是神本体的真像，用他权能的命令托住万有。", "themes_en": ["Son of God", "Superiority to Angels", "Creation", "Eternal Throne"], "themes_zh": ["神的儿子", "超越天使", "创造", "永恒宝座"] },
-  "HEB.2":  { "en": "Why did the Son become human? To taste death for everyone, to destroy the devil's power over death, and to become a merciful high priest who fully identifies with our weakness.", "zh": "神的儿子为何成为人？为要替众人尝死味，败坏魔鬼掌死权的能力，并成为能体恤我们软弱的慈悲大祭司。", "themes_en": ["Incarnation", "Death Defeated", "Solidarity with Humanity", "High Priest"], "themes_zh": ["道成肉身", "胜过死亡", "与人同在", "大祭司"] },
-  "HEB.3":  { "en": "Jesus is greater than Moses — as a Son over God's house, not merely a servant in it. The warning is urgent: don't harden your heart like Israel in the wilderness, or you will miss God's rest.", "zh": "耶稣比摩西更大——他是神家的儿子，而非仅为仆人。警告急切：不可硬心，如同以色列人在旷野，否则必错失神的安息。", "themes_en": ["Greater than Moses", "Hardened Hearts", "Unbelief", "God's Rest"], "themes_zh": ["胜过摩西", "硬心", "不信", "神的安息"] },
-  "HEB.4":  { "en": "A Sabbath rest remains for God's people. The key to entering is faith. God's word is living and active, piercing to the division of soul and spirit. Our great high priest sympathises with every weakness.", "zh": "神的子民仍有安息日的安息存留。进入的关键是信心。神的道是活泼有功效的，能刺入剖开。我们的大祭司能体恤一切软弱。", "themes_en": ["Sabbath Rest", "Living Word", "Faith", "Throne of Grace"], "themes_zh": ["安息日的安息", "活泼的道", "信心", "施恩宝座"] },
-  "HEB.5":  { "en": "Jesus qualifies as high priest not by self-appointment but by divine calling, in the order of Melchizedek. He learned obedience through suffering — and became the source of eternal salvation for all who obey him.", "zh": "耶稣成为大祭司，不是自己取得，而是神的呼召，照麦基洗德的等次。他藉苦难学了顺从，成了永远得救的根源。", "themes_en": ["High Priest", "Order of Melchizedek", "Obedience through Suffering", "Maturity"], "themes_zh": ["大祭司", "麦基洗德等次", "藉苦难学顺从", "成熟"] },
-  "HEB.6":  { "en": "A sobering warning against falling away, followed by great encouragement: God's promise to Abraham is an anchor for the soul, sure and steadfast, reaching into the inner place behind the curtain where Jesus has gone as forerunner.", "zh": "严肃警告离弃之危，随即是极大鼓励：神对亚伯拉罕的应许如同灵魂的锚，坚固牢靠，通入幔内，耶稣已作先锋进入其中。", "themes_en": ["Warning against Apostasy", "God's Oath", "Soul's Anchor", "Forerunner"], "themes_zh": ["离弃的警告", "神的誓言", "灵魂的锚", "先锋"] },
-  "HEB.7":  { "en": "Melchizedek — priest-king of Salem — prefigures Jesus perfectly: without genealogy, without end of life, receiving tithes even from Abraham. Jesus holds his priesthood permanently, always living to intercede.", "zh": "麦基洗德——撒冷的祭司王——完美预表耶稣：无族谱、无命之终，连亚伯拉罕都给他纳十分之一。耶稣的祭司职任永不更换，长远活着代求。", "themes_en": ["Melchizedek", "Eternal Priesthood", "Intercession", "Better Covenant"], "themes_zh": ["麦基洗德", "永远的祭司职任", "代祷", "更美的约"] },
-  "HEB.8":  { "en": "Jesus ministers in the true heavenly tabernacle, not the earthly shadow. He is the mediator of a new covenant — the one Jeremiah prophesied, where God's law is written on hearts, not stone.", "zh": "耶稣在真正天上的帐幕中供职，而非地上的影像。他是新约的中保——耶利米所预言的：神的律法写在心上，而非石版。", "themes_en": ["Heavenly Tabernacle", "New Covenant", "Jeremiah's Prophecy", "Written on Hearts"], "themes_zh": ["天上的帐幕", "新约", "耶利米的预言", "写在心上"] },
-  "HEB.9":  { "en": "The old tabernacle and its rituals were copies of heavenly realities. Christ entered the true holy place once for all with his own blood — securing an eternal redemption that animal sacrifices could never accomplish.", "zh": "旧约的帐幕和礼仪不过是天上实物的影像。基督用自己的血，一次进入真圣所，成就了永远的救赎——这是动物祭祀永不能成就的。", "themes_en": ["Old Covenant Shadows", "Christ's Blood", "Once for All", "Eternal Redemption"], "themes_zh": ["旧约的影子", "基督的血", "一次成就", "永远的救赎"] },
-  "HEB.10": { "en": "The repeated sacrifices of the law could never perfect worshippers. But Christ offered one sacrifice for sins forever, then sat down. Now we draw near with full assurance, hold fast our confession, and stir one another to love and good works.", "zh": "律法一再重复的祭物永不能使人完全。但基督一次献上赎罪祭就坐下了。如今我们坦然进到神面前，坚守承认，彼此激励行善。", "themes_en": ["One Sacrifice", "Draw Near", "Hold Fast", "Gather Together"], "themes_zh": ["一次献祭", "坦然进前", "坚守", "聚会相聚"] },
-  "HEB.11": { "en": "The great hall of faith. From Abel to the prophets, ordinary men and women trusted God's promises they could not yet see — and their lives were transformed. Faith is the substance of things hoped for, the evidence of things not seen.", "zh": "信心的伟大殿堂。从亚伯到众先知，普通男女信靠神尚未看见的应许——生命因此改变。信就是所望之事的实底，是未见之事的确据。", "themes_en": ["Hall of Faith", "Trust in God's Promises", "Unseen Realities", "Endurance"], "themes_zh": ["信心英雄", "信靠神的应许", "未见之事", "忍耐"] },
-  "HEB.12": { "en": "Hebrews 12 opens with one of the most stirring calls to perseverance in the entire New Testament. Building on the great hall of faith in chapter 11, the author urges believers to run their race with endurance — eyes fixed on Jesus, who himself endured the cross. The chapter reframes suffering not as abandonment but as the Father's discipline, the mark of a true son or daughter. It closes with a breathtaking contrast: the terrifying Sinai of the old covenant versus the heavenly Zion of the new, an unshakeable kingdom received by grace.", "zh": "希伯来书第十二章以新约中最激励人心的坚忍呼召之一开篇。作者在第十一章信心英雄的基础上，催促信徒存心忍耐，奔那摆在前头的路程——目光定睛于耶稣，那位亲自忍受十字架的主。本章将苦难重新诠释，不是被遗弃，而是天父的管教，是真儿女的印记。最后以震撼人心的对比作结：旧约令人恐惧的西奈山，对比新约中荣耀的天上锡安山，那不能震动的国度，唯靠恩典领受。", "themes_en": ["Endurance", "Divine Discipline", "Cloud of Witnesses", "New Covenant", "Unshakeable Kingdom"], "themes_zh": ["忍耐奔跑", "天父管教", "众云彩见证人", "新约", "不能震动的国"] },
-  "HEB.13": { "en": "The final chapter of Hebrews is a collection of practical exhortations: brotherly love, hospitality, remembering prisoners, honouring marriage, freedom from the love of money. The anchor is the unchanging Christ: 'Jesus Christ is the same yesterday, today and forever.' We offer a sacrifice of praise through him, going outside the camp to bear his reproach.", "zh": "希伯来书最后一章是一系列实际劝勉：弟兄相爱、款待客旅、记念被囚的人、尊重婚姻、不贪爱钱财。根基是那永不改变的基督：\"耶稣基督昨日、今日、一直到永远是一样的。\"我们藉着他献上颂赞为祭，出到营外忍受他所受的凌辱。", "themes_en": ["Brotherly Love", "Unchanging Christ", "Sacrifice of Praise", "Outside the Camp", "Benediction"], "themes_zh": ["弟兄相爱", "永不改变的基督", "颂赞为祭", "出到营外", "祝福祷告"] },
-  "2JN.1": { "en": "The shortest letter in the New Testament — just 13 verses — is a masterclass in clarity. Written by 'the elder' (almost certainly the Apostle John) to a local church and its members, it celebrates those walking in truth, renews the ancient command to love one another, and sounds a sharp warning: do not welcome false teachers who deny the Incarnation into your home or even greet them, lest you share in their evil work. Truth and love are inseparable twins throughout.", "zh": "这是新约最短的书信，仅十三节，却是一篇精炼的劝勉。作者\"长老\"（几乎可确定是使徒约翰）写给一间地方教会及其成员，称赞那些遵行真理的人，重申彼此相爱的古老命令，并发出严肃警告：不要接待否认道成肉身的假师傅，甚至不可问安，免得在他们的恶行上有分。真理与爱心始终相辅相成，贯穿全篇。", "themes_en": ["Truth and Love", "Walking in Truth", "False Teachers", "Incarnation", "Hospitality Boundaries"], "themes_zh": ["真理与爱", "遵行真理", "假教师", "道成肉身", "接待的界限"] },
-  "JHN.1": { "en": "John's Gospel opens not with a birth story but with eternity: 'In the beginning was the Word.' Jesus is the eternal Logos — the Word through whom all things were made — who became flesh and dwelt among us. John the Baptist is introduced solely as a witness pointing to the true Light. The chapter closes with the first disciples: Andrew, Peter, Philip, and Nathanael, each finding Jesus in their own way. The famous verse 1:14 — 'the Word became flesh' — is the hinge on which all of Christian theology turns.", "zh": "约翰福音开篇不是诞生故事，而是永恒：太初有道。耶稣是永恒的道——万物藉他而造——他成了肉身，住在我们中间。施洗约翰的唯一使命是为真光作见证。本章末尾记载了最初的门徒：安得烈、彼得、腓力和拿但业，各以不同的方式来到耶稣面前。第14节——道成了肉身——是整个基督教神学的枢纽。", "themes_en": ["The Word / Logos", "Incarnation", "Light and Darkness", "Witness", "First Disciples"], "themes_zh": ["道", "道成肉身", "光与黑暗", "见证", "最初的门徒"] },
-  "JHN.2": { "en": "John 2 holds two unforgettable scenes. First, the wedding at Cana: Jesus turns water into wine at his mother's quiet prompting — his first sign, revealing his glory and prompting his disciples' faith. Then the temple clearing: Jesus drives out the merchants and money-changers with a whip, declaring the temple his Father's house. When challenged, he speaks of raising 'this temple' in three days — a saying the disciples only understood after the resurrection. Both signs point to the same truth: the old order is being replaced by something new, and Jesus himself is the centre of it.", "zh": "约翰福音第二章记载了两个令人难忘的场景。首先是迦拿婚宴：耶稣在母亲的轻声提示下，将水变为酒——这是他所行的第一件神迹，显出他的荣耀，门徒因此信了他。其次是洁净圣殿：耶稣用鞭子赶出牛羊和兑换银钱的人，宣告殿是他父的殿。当人们质疑时，他说要在三天内重建这殿——这句话直到复活后门徒才明白。两个神迹指向同一真理：旧的秩序正在被新的所取代，而耶稣自己就是一切的中心。", "themes_en": ["Water into Wine", "Signs and Glory", "Temple Cleansing", "Death and Resurrection", "Faith"], "themes_zh": ["水变酒", "神迹与荣耀", "洁净圣殿", "死与复活", "信心"] }
+  "HEB.1": {
+    "en": "The letter opens with a majestic declaration: Jesus is the ultimate and final word of God — superior to angels, the exact imprint of God's nature, sustaining the universe by his powerful word.",
+    "zh": "书信以宏大的宣告开篇：耶稣是神最终极的话语——远超天使，是神本体的真像，用他权能的命令托住万有。",
+    "themes_en": [
+      "Son of God",
+      "Superiority to Angels",
+      "Creation",
+      "Eternal Throne"
+    ],
+    "themes_zh": [
+      "神的儿子",
+      "超越天使",
+      "创造",
+      "永恒宝座"
+    ]
+  },
+  "HEB.2": {
+    "en": "Why did the Son become human? To taste death for everyone, to destroy the devil's power over death, and to become a merciful high priest who fully identifies with our weakness.",
+    "zh": "神的儿子为何成为人？为要替众人尝死味，败坏魔鬼掌死权的能力，并成为能体恤我们软弱的慈悲大祭司。",
+    "themes_en": [
+      "Incarnation",
+      "Death Defeated",
+      "Solidarity with Humanity",
+      "High Priest"
+    ],
+    "themes_zh": [
+      "道成肉身",
+      "胜过死亡",
+      "与人同在",
+      "大祭司"
+    ]
+  },
+  "HEB.3": {
+    "en": "Jesus is greater than Moses — as a Son over God's house, not merely a servant in it. The warning is urgent: don't harden your heart like Israel in the wilderness, or you will miss God's rest.",
+    "zh": "耶稣比摩西更大——他是神家的儿子，而非仅为仆人。警告急切：不可硬心，如同以色列人在旷野，否则必错失神的安息。",
+    "themes_en": [
+      "Greater than Moses",
+      "Hardened Hearts",
+      "Unbelief",
+      "God's Rest"
+    ],
+    "themes_zh": [
+      "胜过摩西",
+      "硬心",
+      "不信",
+      "神的安息"
+    ]
+  },
+  "HEB.4": {
+    "en": "A Sabbath rest remains for God's people. The key to entering is faith. God's word is living and active, piercing to the division of soul and spirit. Our great high priest sympathises with every weakness.",
+    "zh": "神的子民仍有安息日的安息存留。进入的关键是信心。神的道是活泼有功效的，能刺入剖开。我们的大祭司能体恤一切软弱。",
+    "themes_en": [
+      "Sabbath Rest",
+      "Living Word",
+      "Faith",
+      "Throne of Grace"
+    ],
+    "themes_zh": [
+      "安息日的安息",
+      "活泼的道",
+      "信心",
+      "施恩宝座"
+    ]
+  },
+  "HEB.5": {
+    "en": "Jesus qualifies as high priest not by self-appointment but by divine calling, in the order of Melchizedek. He learned obedience through suffering — and became the source of eternal salvation for all who obey him.",
+    "zh": "耶稣成为大祭司，不是自己取得，而是神的呼召，照麦基洗德的等次。他藉苦难学了顺从，成了永远得救的根源。",
+    "themes_en": [
+      "High Priest",
+      "Order of Melchizedek",
+      "Obedience through Suffering",
+      "Maturity"
+    ],
+    "themes_zh": [
+      "大祭司",
+      "麦基洗德等次",
+      "藉苦难学顺从",
+      "成熟"
+    ]
+  },
+  "HEB.6": {
+    "en": "A sobering warning against falling away, followed by great encouragement: God's promise to Abraham is an anchor for the soul, sure and steadfast, reaching into the inner place behind the curtain where Jesus has gone as forerunner.",
+    "zh": "严肃警告离弃之危，随即是极大鼓励：神对亚伯拉罕的应许如同灵魂的锚，坚固牢靠，通入幔内，耶稣已作先锋进入其中。",
+    "themes_en": [
+      "Warning against Apostasy",
+      "God's Oath",
+      "Soul's Anchor",
+      "Forerunner"
+    ],
+    "themes_zh": [
+      "离弃的警告",
+      "神的誓言",
+      "灵魂的锚",
+      "先锋"
+    ]
+  },
+  "HEB.7": {
+    "en": "Melchizedek — priest-king of Salem — prefigures Jesus perfectly: without genealogy, without end of life, receiving tithes even from Abraham. Jesus holds his priesthood permanently, always living to intercede.",
+    "zh": "麦基洗德——撒冷的祭司王——完美预表耶稣：无族谱、无命之终，连亚伯拉罕都给他纳十分之一。耶稣的祭司职任永不更换，长远活着代求。",
+    "themes_en": [
+      "Melchizedek",
+      "Eternal Priesthood",
+      "Intercession",
+      "Better Covenant"
+    ],
+    "themes_zh": [
+      "麦基洗德",
+      "永远的祭司职任",
+      "代祷",
+      "更美的约"
+    ]
+  },
+  "HEB.8": {
+    "en": "Jesus ministers in the true heavenly tabernacle, not the earthly shadow. He is the mediator of a new covenant — the one Jeremiah prophesied, where God's law is written on hearts, not stone.",
+    "zh": "耶稣在真正天上的帐幕中供职，而非地上的影像。他是新约的中保——耶利米所预言的：神的律法写在心上，而非石版。",
+    "themes_en": [
+      "Heavenly Tabernacle",
+      "New Covenant",
+      "Jeremiah's Prophecy",
+      "Written on Hearts"
+    ],
+    "themes_zh": [
+      "天上的帐幕",
+      "新约",
+      "耶利米的预言",
+      "写在心上"
+    ]
+  },
+  "HEB.9": {
+    "en": "The old tabernacle and its rituals were copies of heavenly realities. Christ entered the true holy place once for all with his own blood — securing an eternal redemption that animal sacrifices could never accomplish.",
+    "zh": "旧约的帐幕和礼仪不过是天上实物的影像。基督用自己的血，一次进入真圣所，成就了永远的救赎——这是动物祭祀永不能成就的。",
+    "themes_en": [
+      "Old Covenant Shadows",
+      "Christ's Blood",
+      "Once for All",
+      "Eternal Redemption"
+    ],
+    "themes_zh": [
+      "旧约的影子",
+      "基督的血",
+      "一次成就",
+      "永远的救赎"
+    ]
+  },
+  "HEB.10": {
+    "en": "The repeated sacrifices of the law could never perfect worshippers. But Christ offered one sacrifice for sins forever, then sat down. Now we draw near with full assurance, hold fast our confession, and stir one another to love and good works.",
+    "zh": "律法一再重复的祭物永不能使人完全。但基督一次献上赎罪祭就坐下了。如今我们坦然进到神面前，坚守承认，彼此激励行善。",
+    "themes_en": [
+      "One Sacrifice",
+      "Draw Near",
+      "Hold Fast",
+      "Gather Together"
+    ],
+    "themes_zh": [
+      "一次献祭",
+      "坦然进前",
+      "坚守",
+      "聚会相聚"
+    ]
+  },
+  "HEB.11": {
+    "en": "The great hall of faith. From Abel to the prophets, ordinary men and women trusted God's promises they could not yet see — and their lives were transformed. Faith is the substance of things hoped for, the evidence of things not seen.",
+    "zh": "信心的伟大殿堂。从亚伯到众先知，普通男女信靠神尚未看见的应许——生命因此改变。信就是所望之事的实底，是未见之事的确据。",
+    "themes_en": [
+      "Hall of Faith",
+      "Trust in God's Promises",
+      "Unseen Realities",
+      "Endurance"
+    ],
+    "themes_zh": [
+      "信心英雄",
+      "信靠神的应许",
+      "未见之事",
+      "忍耐"
+    ]
+  },
+  "HEB.12": {
+    "en": "Hebrews 12 opens with one of the most stirring calls to perseverance in the entire New Testament. Building on the great hall of faith in chapter 11, the author urges believers to run their race with endurance — eyes fixed on Jesus, who himself endured the cross. The chapter reframes suffering not as abandonment but as the Father's discipline, the mark of a true son or daughter. It closes with a breathtaking contrast: the terrifying Sinai of the old covenant versus the heavenly Zion of the new, an unshakeable kingdom received by grace.",
+    "zh": "希伯来书第十二章以新约中最激励人心的坚忍呼召之一开篇。作者在第十一章信心英雄的基础上，催促信徒存心忍耐，奔那摆在前头的路程——目光定睛于耶稣，那位亲自忍受十字架的主。本章将苦难重新诠释，不是被遗弃，而是天父的管教，是真儿女的印记。最后以震撼人心的对比作结：旧约令人恐惧的西奈山，对比新约中荣耀的天上锡安山，那不能震动的国度，唯靠恩典领受。",
+    "themes_en": [
+      "Endurance",
+      "Divine Discipline",
+      "Cloud of Witnesses",
+      "New Covenant",
+      "Unshakeable Kingdom"
+    ],
+    "themes_zh": [
+      "忍耐奔跑",
+      "天父管教",
+      "众云彩见证人",
+      "新约",
+      "不能震动的国"
+    ]
+  },
+  "HEB.13": {
+    "en": "The final chapter of Hebrews is a collection of practical exhortations: brotherly love, hospitality, remembering prisoners, honouring marriage, freedom from the love of money. The anchor is the unchanging Christ: 'Jesus Christ is the same yesterday, today and forever.' We offer a sacrifice of praise through him, going outside the camp to bear his reproach.",
+    "zh": "希伯来书最后一章是一系列实际劝勉：弟兄相爱、款待客旅、记念被囚的人、尊重婚姻、不贪爱钱财。根基是那永不改变的基督：\"耶稣基督昨日、今日、一直到永远是一样的。\"我们藉着他献上颂赞为祭，出到营外忍受他所受的凌辱。",
+    "themes_en": [
+      "Brotherly Love",
+      "Unchanging Christ",
+      "Sacrifice of Praise",
+      "Outside the Camp",
+      "Benediction"
+    ],
+    "themes_zh": [
+      "弟兄相爱",
+      "永不改变的基督",
+      "颂赞为祭",
+      "出到营外",
+      "祝福祷告"
+    ]
+  },
+  "2JN.1": {
+    "en": "The shortest letter in the New Testament — just 13 verses — is a masterclass in clarity. Written by 'the elder' (almost certainly the Apostle John) to a local church and its members, it celebrates those walking in truth, renews the ancient command to love one another, and sounds a sharp warning: do not welcome false teachers who deny the Incarnation into your home or even greet them, lest you share in their evil work. Truth and love are inseparable twins throughout.",
+    "zh": "这是新约最短的书信，仅十三节，却是一篇精炼的劝勉。作者\"长老\"（几乎可确定是使徒约翰）写给一间地方教会及其成员，称赞那些遵行真理的人，重申彼此相爱的古老命令，并发出严肃警告：不要接待否认道成肉身的假师傅，甚至不可问安，免得在他们的恶行上有分。真理与爱心始终相辅相成，贯穿全篇。",
+    "themes_en": [
+      "Truth and Love",
+      "Walking in Truth",
+      "False Teachers",
+      "Incarnation",
+      "Hospitality Boundaries"
+    ],
+    "themes_zh": [
+      "真理与爱",
+      "遵行真理",
+      "假教师",
+      "道成肉身",
+      "接待的界限"
+    ]
+  },
+  "JHN.1": {
+    "en": "John's Gospel opens not with a birth story but with eternity: 'In the beginning was the Word.' Jesus is the eternal Logos — the Word through whom all things were made — who became flesh and dwelt among us. John the Baptist is introduced solely as a witness pointing to the true Light. The chapter closes with the first disciples: Andrew, Peter, Philip, and Nathanael, each finding Jesus in their own way. The famous verse 1:14 — 'the Word became flesh' — is the hinge on which all of Christian theology turns.",
+    "zh": "约翰福音开篇不是诞生故事，而是永恒：太初有道。耶稣是永恒的道——万物藉他而造——他成了肉身，住在我们中间。施洗约翰的唯一使命是为真光作见证。本章末尾记载了最初的门徒：安得烈、彼得、腓力和拿但业，各以不同的方式来到耶稣面前。第14节——道成了肉身——是整个基督教神学的枢纽。",
+    "themes_en": [
+      "The Word / Logos",
+      "Incarnation",
+      "Light and Darkness",
+      "Witness",
+      "First Disciples"
+    ],
+    "themes_zh": [
+      "道",
+      "道成肉身",
+      "光与黑暗",
+      "见证",
+      "最初的门徒"
+    ]
+  },
+  "JHN.2": {
+    "en": "John 2 holds two unforgettable scenes. First, the wedding at Cana: Jesus turns water into wine at his mother's quiet prompting — his first sign, revealing his glory and prompting his disciples' faith. Then the temple clearing: Jesus drives out the merchants and money-changers with a whip, declaring the temple his Father's house. When challenged, he speaks of raising 'this temple' in three days — a saying the disciples only understood after the resurrection. Both signs point to the same truth: the old order is being replaced by something new, and Jesus himself is the centre of it.",
+    "zh": "约翰福音第二章记载了两个令人难忘的场景。首先是迦拿婚宴：耶稣在母亲的轻声提示下，将水变为酒——这是他所行的第一件神迹，显出他的荣耀，门徒因此信了他。其次是洁净圣殿：耶稣用鞭子赶出牛羊和兑换银钱的人，宣告殿是他父的殿。当人们质疑时，他说要在三天内重建这殿——这句话直到复活后门徒才明白。两个神迹指向同一真理：旧的秩序正在被新的所取代，而耶稣自己就是一切的中心。",
+    "themes_en": [
+      "Water into Wine",
+      "Signs and Glory",
+      "Temple Cleansing",
+      "Death and Resurrection",
+      "Faith"
+    ],
+    "themes_zh": [
+      "水变酒",
+      "神迹与荣耀",
+      "洁净圣殿",
+      "死与复活",
+      "信心"
+    ]
+  },
+  "JHN.3": {
+    "en": "Nicodemus, a Pharisee and ruler of Israel, comes to Jesus by night. Jesus tells him that no one can see the kingdom of God without being born again — born of water and the Spirit. The chapter reaches its climax in John 3:16, the gospel in miniature: God so loved the world that he gave his only Son.",
+    "zh": "法利赛人尼哥底母夜里来见耶稣。耶稣告诉他，人若不重生，就不能见神的国——要从水和圣灵生。本章以约翰福音三章十六节达到高峰，那是福音的精华：神爱世人，甚至将他的独生子赐给他们。",
+    "themes_en": [
+      "Born Again",
+      "Eternal Life",
+      "God's Love",
+      "Belief and Condemnation",
+      "Spirit"
+    ],
+    "themes_zh": [
+      "重生",
+      "永生",
+      "神的爱",
+      "信与不信",
+      "圣灵"
+    ]
+  },
+  "JHN.4": {
+    "en": "Jesus crosses cultural boundaries to speak with a Samaritan woman at Jacob's well — offering her 'living water' that will become a spring welling up to eternal life. Her testimony brings her whole village to faith. The chapter ends with Jesus healing an official's son: the second sign, and the first at a distance.",
+    "zh": "耶稣跨越文化界限，在雅各井旁与撒玛利亚妇人交谈，应许她那成为永生之泉的'活水'。她的见证使全村人相信。本章以医治大臣之子作结：这是第二个神迹，也是首次远距离行的神迹。",
+    "themes_en": [
+      "Living Water",
+      "True Worship",
+      "Samaritan Mission",
+      "Signs",
+      "Eternal Life"
+    ],
+    "themes_zh": [
+      "活水",
+      "真正的敬拜",
+      "撒玛利亚使命",
+      "神迹",
+      "永生"
+    ]
+  },
+  "JHN.5": {
+    "en": "At the pool of Bethesda on the Sabbath, Jesus heals a man who had been ill for 38 years — sparking a direct confrontation with the Jewish leaders. Jesus responds with one of his greatest discourses: the Father and the Son act in perfect unity; the Son gives life and executes judgment; Moses himself wrote about Jesus.",
+    "zh": "耶稣在安息日于毕士大池医治一个病了三十八年的人，由此引发与犹太领袖的正面冲突。耶稣随即发表重要讲论：父与子完全同心而行；子赐生命、执行审判；摩西所写的正是指着耶稣。",
+    "themes_en": [
+      "Healing on the Sabbath",
+      "Son and Father",
+      "Life and Judgment",
+      "Witness to Jesus",
+      "Works of Jesus"
+    ],
+    "themes_zh": [
+      "安息日医治",
+      "子与父",
+      "生命与审判",
+      "对耶稣的见证",
+      "耶稣的工"
+    ]
+  },
+  "JHN.6": {
+    "en": "The feeding of five thousand triggers a massive following — and then Jesus deliberately thins the crowd. Walking on water, he reveals his divine identity. The Bread of Life discourse is stunning: 'I am the bread of life; whoever comes to me shall not hunger.' Many disciples turn back at the hard saying. Peter speaks for the Twelve: 'Lord, to whom shall we go?'",
+    "zh": "五饼二鱼的神迹引来大批跟随者，耶稣随后主动筛减人群。他在海面上行走，显明神圣身份。生命之粮的讲论令人震撼：'我就是生命之粮，到我这里来的必永不饥饿。'许多门徒因这难以接受的话而离去。彼得代表十二门徒说：'主啊，你有永生之道，我们还归从谁呢？'",
+    "themes_en": [
+      "Bread of Life",
+      "Feeding Five Thousand",
+      "Walking on Water",
+      "Eucharist",
+      "True Discipleship"
+    ],
+    "themes_zh": [
+      "生命之粮",
+      "五饼二鱼",
+      "水上行走",
+      "圣餐",
+      "真正的门徒"
+    ]
+  },
+  "JHN.7": {
+    "en": "At the Feast of Tabernacles, Jesus teaches in the temple, dividing the crowd. His authority is questioned — yet he speaks with astonishing confidence: 'My teaching is not mine, but his who sent me.' On the last day of the feast he cries out the great invitation: 'If anyone thirsts, let him come to me and drink.'",
+    "zh": "住棚节期间，耶稣在殿中教导，引发人群分裂。众人质疑他的权柄，他却以惊人的信心宣告：'我的教训不是我自己的，乃是那差我来者的。'节期末日，他发出伟大的呼召：'人若渴了，可以到我这里来喝。'",
+    "themes_en": [
+      "Feast of Tabernacles",
+      "Living Water",
+      "Division over Jesus",
+      "Authority of Teaching",
+      "Spirit"
+    ],
+    "themes_zh": [
+      "住棚节",
+      "活水",
+      "对耶稣的争议",
+      "教训的权柄",
+      "圣灵"
+    ]
+  },
+  "JHN.8": {
+    "en": "The woman caught in adultery opens the chapter: Jesus writes in the dust and dismisses her accusers one by one. Then comes the great 'I AM' discourse — 'I am the light of the world' — and a mounting confrontation over his identity as the eternal Son. The chapter ends with the explosive claim: 'Before Abraham was, I am.'",
+    "zh": "行淫被拿的妇人开启本章：耶稣在地上写字，将控诉者一一逐退。随后是伟大的'我是'讲论——'我是世界的光'——以及关于他作为永恒之子的身份的激烈冲突。本章以这震撼的宣告作结：'还没有亚伯拉罕，就有了我。'",
+    "themes_en": [
+      "Light of the World",
+      "I AM",
+      "Freedom from Sin",
+      "Abraham",
+      "True Identity of Jesus"
+    ],
+    "themes_zh": [
+      "世界的光",
+      "我是",
+      "从罪得自由",
+      "亚伯拉罕",
+      "耶稣的真实身份"
+    ]
+  },
+  "JHN.9": {
+    "en": "Jesus heals a man born blind — and the once-blind man becomes an increasingly courageous witness to Jesus while the Pharisees grow increasingly blind. The irony is deliberate: those who claim to see are condemned; the man who was blind now sees in every sense. Jesus declares himself the Son of Man.",
+    "zh": "耶稣医治一个生来瞎眼的人，这个曾经瞎眼的人越来越勇敢地为耶稣作见证，而法利赛人却越来越瞎眼。这反讽是刻意的：自称能看见的人受到定罪，而那曾经瞎眼的人如今在各方面都能看见。耶稣宣告自己是人子。",
+    "themes_en": [
+      "Spiritual Blindness",
+      "Healing",
+      "Witness",
+      "Pharisees",
+      "Son of Man"
+    ],
+    "themes_zh": [
+      "属灵的瞎眼",
+      "医治",
+      "见证",
+      "法利赛人",
+      "人子"
+    ]
+  },
+  "JHN.10": {
+    "en": "Jesus is the Good Shepherd who lays down his life for the sheep — in stark contrast to thieves and hired hands. His sheep know his voice, and he knows them by name. The unity of the Father and Son reaches its clearest statement: 'I and the Father are one.' The attempt to stone him only intensifies the question: who is this man?",
+    "zh": "耶稣是好牧人，为羊舍命——与贼和雇工形成鲜明对比。他的羊认得他的声音，他也按名认识他们。父与子的合一在这里表达得最清晰：'我与父原为一。'众人试图用石头打他，只是加深了这个问题：这人究竟是谁？",
+    "themes_en": [
+      "Good Shepherd",
+      "Laying Down His Life",
+      "Unity of Father and Son",
+      "Sheep and Voice",
+      "Eternal Security"
+    ],
+    "themes_zh": [
+      "好牧人",
+      "舍命",
+      "父与子的合一",
+      "羊与声音",
+      "永恒的保障"
+    ]
+  },
+  "JHN.11": {
+    "en": "The raising of Lazarus is the seventh and climactic sign in John's Gospel. 'Jesus wept' — the shortest verse in Scripture — captures God's solidarity with human grief. Then the tomb is opened and Lazarus walks out. 'I am the resurrection and the life' becomes not a claim to argue about but a fact to witness. The miracle seals the decision to kill Jesus.",
+    "zh": "拉撒路复活是约翰福音第七个也是高峰性的神迹。'耶稣哭了'——圣经中最短的一节——捕捉了神与人同悲的深情。随后坟墓敞开，拉撒路走了出来。'复活在我，生命也在我'不再只是一句待辩的宣告，而是一个眼见的事实。这神迹使杀害耶稣的决定最终定案。",
+    "themes_en": [
+      "Resurrection",
+      "I Am the Resurrection",
+      "Jesus Wept",
+      "Lazarus",
+      "Glory of God"
+    ],
+    "themes_zh": [
+      "复活",
+      "复活在我",
+      "耶稣哭了",
+      "拉撒路",
+      "神的荣耀"
+    ]
+  },
+  "JHN.12": {
+    "en": "Mary anoints Jesus with costly perfume — an act of extravagant devotion. Jesus enters Jerusalem on a donkey to the crowd's hosannas, fulfilling Zechariah's prophecy. Seeking Greeks arrive, and Jesus announces that the hour has come: 'Unless a grain of wheat falls into the earth and dies, it remains alone.' He is troubled, yet resolute.",
+    "zh": "马利亚用昂贵的香膏膏抹耶稣，这是极度的奉献之举。耶稣骑驴进入耶路撒冷，众人高呼和散那，应验了撒迦利亚的预言。有几个希腊人来求见，耶稣宣告时候已到：'一粒麦子若不落在地里死了，仍旧是一粒。'他心里忧愁，却意志坚定。",
+    "themes_en": [
+      "Triumphal Entry",
+      "Hour Has Come",
+      "Grain of Wheat",
+      "Anointing",
+      "Glorification"
+    ],
+    "themes_zh": [
+      "棕枝主日",
+      "时候已到",
+      "麦粒",
+      "膏抹",
+      "得荣耀"
+    ]
+  },
+  "JHN.13": {
+    "en": "On the night of his betrayal, Jesus wraps a towel around his waist and washes his disciples' feet — the Lord stooping to serve. Peter protests, then overreaches; Judas slips out into the night. Jesus gives the new commandment: 'Love one another as I have loved you.' This is the mark of his disciples.",
+    "zh": "在被卖的那夜，耶稣束上腰，为门徒洗脚——主俯身服侍。彼得先是拒绝，后又过度热切；犹大悄然走入黑暗。耶稣赐下新命令：'你们要彼此相爱，像我爱你们一样。'这是他门徒的标志。",
+    "themes_en": [
+      "Servant Leadership",
+      "Washing Feet",
+      "New Commandment",
+      "Love",
+      "Betrayal"
+    ],
+    "themes_zh": [
+      "仆人式领导",
+      "洗脚",
+      "新命令",
+      "爱",
+      "背叛"
+    ]
+  },
+  "JHN.14": {
+    "en": "The first part of the Farewell Discourse offers extraordinary comfort to troubled hearts. 'I am the way, the truth, and the life.' Jesus promises to go and prepare a place; he will return. He promises the Holy Spirit — the Paraclete, another Helper — who will teach them all things and remind them of everything Jesus said.",
+    "zh": "告别讲论的第一部分给忧愁的心带来非凡安慰。'我就是道路、真理、生命。'耶稣应许要去为他们预备地方，还要回来。他应许赐下圣灵——那保惠师，另一位帮助者——要教导他们一切，提醒他们耶稣所说的。",
+    "themes_en": [
+      "Way, Truth, Life",
+      "Holy Spirit / Paraclete",
+      "Peace",
+      "Preparing a Place",
+      "Unity with the Father"
+    ],
+    "themes_zh": [
+      "道路真理生命",
+      "圣灵/保惠师",
+      "平安",
+      "预备地方",
+      "与父同在"
+    ]
+  },
+  "JHN.15": {
+    "en": "Jesus is the true vine; the disciples are the branches. Apart from him they can do nothing — but abiding in him they bear much fruit. The command to love one another is repeated and deepened: 'Greater love has no one than this, that someone lay down his life for his friends.' The world will hate them, as it hated Jesus first.",
+    "zh": "耶稣是真葡萄树，门徒是枝子。离了他，他们什么都不能做——但若常在他里面，就多结果子。彼此相爱的命令被重复并加深：'人为朋友舍命，人的爱心没有比这更大的了。'世界会恨他们，因为世界先恨了耶稣。",
+    "themes_en": [
+      "True Vine",
+      "Abiding",
+      "Fruit-Bearing",
+      "Love One Another",
+      "World's Hatred"
+    ],
+    "themes_zh": [
+      "真葡萄树",
+      "常在",
+      "多结果子",
+      "彼此相爱",
+      "世界的恨"
+    ]
+  },
+  "JHN.16": {
+    "en": "Jesus prepares his disciples for what is coming: persecution, his departure, their grief — and the Holy Spirit who will convict the world of sin, righteousness, and judgment. Grief will turn to joy, like a woman whose labour pain is forgotten when the child is born. The farewell ends with a promise: 'In the world you will have tribulation. But take heart; I have overcome the world.'",
+    "zh": "耶稣预备门徒面对即将来临的事：逼迫、他的离去、他们的忧愁——以及那将使世人明白罪、义、审判的圣灵。忧愁将转为喜乐，如同女人生产之后忘却了产痛。告别以应许作结：'在世上你们有苦难，但你们可以放心，我已经胜了世界。'",
+    "themes_en": [
+      "Holy Spirit's Work",
+      "Grief and Joy",
+      "Overcoming the World",
+      "Persecution",
+      "Prayer in Jesus' Name"
+    ],
+    "themes_zh": [
+      "圣灵的工作",
+      "忧愁与喜乐",
+      "胜过世界",
+      "逼迫",
+      "奉耶稣的名祷告"
+    ]
+  },
+  "JHN.17": {
+    "en": "The High Priestly Prayer — the longest recorded prayer of Jesus — is offered on the night of his betrayal. He prays for himself (that the Father would glorify him), for his disciples (that they be protected and sanctified), and for all future believers (that they be perfectly one). The unity Jesus prays for is patterned on the unity of the Trinity.",
+    "zh": "大祭司式的祷告——耶稣最长的祷告记录——在他被卖的那夜献上。他为自己祷告（求父荣耀他），为门徒祷告（求父保守他们、使他们圣洁），也为所有将来信的人祷告（使他们完全合一）。耶稣所求的合一，以三一神的合一为模式。",
+    "themes_en": [
+      "High Priestly Prayer",
+      "Unity of Believers",
+      "Glorification",
+      "Sanctification",
+      "Sent into the World"
+    ],
+    "themes_zh": [
+      "大祭司式的祷告",
+      "信徒的合一",
+      "得荣耀",
+      "圣洁",
+      "被差入世界"
+    ]
+  },
+  "JHN.18": {
+    "en": "The arrest in Gethsemane — Jesus steps forward to meet the soldiers while his disciples flee. Peter's three denials frame the interrogation scenes. Jesus stands before Annas and then Pilate. The Roman governor asks the decisive question: 'What is truth?' — and then, paradoxically, hands over Truth himself to be crucified.",
+    "zh": "在客西马尼的被捕——耶稣主动迎向兵丁，门徒四散逃跑。彼得三次不认主，贯穿整个审问场景。耶稣先被带到亚那面前，再到彼拉多面前。这位罗马官员问出关键问题：'真理是什么？'——然后吊诡地将真理本身交出去钉十字架。",
+    "themes_en": [
+      "Arrest",
+      "Peter's Denial",
+      "Trial before Pilate",
+      "Truth",
+      "Jesus' Sovereignty"
+    ],
+    "themes_zh": [
+      "被捕",
+      "彼得三次不认主",
+      "彼拉多审判",
+      "真理",
+      "耶稣的主权"
+    ]
+  },
+  "JHN.19": {
+    "en": "The crucifixion of Jesus as John tells it: soldiers, a crown of thorns, 'Behold the man', the titulus on the cross in three languages. Scripture is fulfilled at every turn. Mary and the beloved disciple stand at the foot of the cross. A soldier pierces his side — blood and water flow out. It is finished.",
+    "zh": "约翰所记述的耶稣受难：兵丁、荆棘冠冕、'你们看这个人'、用三种语言写的牌子。每个细节都应验了经文。马利亚和那所爱的门徒站在十字架旁。兵丁用矛刺他的肋旁，立刻流出血和水。成了。",
+    "themes_en": [
+      "Crucifixion",
+      "It Is Finished",
+      "Fulfillment of Scripture",
+      "Blood and Water",
+      "Burial"
+    ],
+    "themes_zh": [
+      "钉十字架",
+      "成了",
+      "应验经文",
+      "血与水",
+      "埋葬"
+    ]
+  },
+  "JHN.20": {
+    "en": "The resurrection morning: Mary Magdalene runs to the tomb, finds it empty, and weeps. Then Jesus speaks her name — and she recognises him. Thomas, the doubter, encounters the risen Lord and makes the greatest confession in the Gospel: 'My Lord and my God.' John closes: these signs are written so that you may believe that Jesus is the Christ, the Son of God.",
+    "zh": "复活的早晨：抹大拉的马利亚跑到坟墓，发现空了，在外面哭泣。耶稣呼唤她的名字——她认出了他。多马，那个怀疑者，遇见了复活的主，发出福音中最伟大的认信：'我的主，我的神！'约翰在末尾写道：记载这些神迹，是要叫你们信耶稣是基督、是神的儿子。",
+    "themes_en": [
+      "Resurrection",
+      "Mary Magdalene",
+      "Thomas's Confession",
+      "Belief",
+      "Purpose of the Gospel"
+    ],
+    "themes_zh": [
+      "复活",
+      "抹大拉的马利亚",
+      "多马的认信",
+      "信",
+      "福音的目的"
+    ]
+  },
+  "JHN.21": {
+    "en": "An epilogue by the Sea of Galilee: a miraculous catch of fish and breakfast with the risen Jesus. Then the restoration of Peter — three questions of love to match three denials — and the commission: 'Feed my sheep.' Peter's martyrdom is foreshadowed. The Gospel ends: the world itself could not contain the books that could be written about Jesus.",
+    "zh": "加利利海边的尾声：奇妙的捕鱼神迹，与复活的耶稣共进早餐。随后是彼得的恢复——三次爱的询问，对应三次不认——以及使命的委托：'你牧养我的羊。'彼得的殉道被预示。福音书以这句话作结：所写的书就是世界也容不下了。",
+    "themes_en": [
+      "Restoration of Peter",
+      "Feeding the Sheep",
+      "Fishing Miracle",
+      "Martyrdom",
+      "Beloved Disciple"
+    ],
+    "themes_zh": [
+      "彼得的恢复",
+      "牧养羊群",
+      "捕鱼神迹",
+      "殉道",
+      "所爱的门徒"
+    ]
+  },
+  "JAS.1": {
+    "en": "James opens with a striking paradox: count it all joy when you face trials, because testing produces steadfastness. Wisdom is available to all who ask in faith — not double-minded. The reversal of rich and poor, the danger of desire unchecked, and the call to be doers of the word and not hearers only set the tone for a thoroughly practical letter.",
+    "zh": "雅各以一个惊人的悖论开篇：遭遇百般试炼都要以为大喜乐，因为试验信心能生忍耐。凡缺少智慧的，可以向神祈求——但要凭信心，不要疑惑。贫富的逆转、放纵私欲的危险、做道的人而非单单听道的呼召，为这封极具实践性的书信定下基调。",
+    "themes_en": [
+      "Trials and Wisdom",
+      "Steadfastness",
+      "Hearing and Doing",
+      "Double-mindedness",
+      "Desire and Sin"
+    ],
+    "themes_zh": [
+      "试炼与智慧",
+      "忍耐",
+      "听道行道",
+      "心怀二意",
+      "私欲与罪"
+    ]
+  },
+  "JAS.2": {
+    "en": "Favouritism in the church is flatly condemned — to show partiality is to sin against the royal law of love. Then comes the great challenge to cheap faith: 'Faith without works is dead.' Abraham was justified by works when he offered Isaac; Rahab was justified when she hid the spies. True faith always shows itself.",
+    "zh": "教会中的偏待行为被直接谴责——存偏见就是违背爱的皇家律法。随后是对廉价信仰的重大挑战：'信心若没有行为就是死的。'亚伯拉罕因献以撒的行为得称义；喇合因收留探子的行为得称义。真正的信心总会显明自己。",
+    "themes_en": [
+      "Partiality",
+      "Faith and Works",
+      "Royal Law",
+      "Abraham and Rahab",
+      "Dead Faith"
+    ],
+    "themes_zh": [
+      "偏待",
+      "信心与行为",
+      "皇家律法",
+      "亚伯拉罕与喇合",
+      "死的信心"
+    ]
+  },
+  "JAS.3": {
+    "en": "The tongue is a small rudder that steers a great ship, a tiny spark that sets a forest ablaze. With it we bless God and curse men — this ought not to be. The chapter turns to two kinds of wisdom: earthly wisdom that is jealous and selfish, and heavenly wisdom that is 'first pure, then peaceable, gentle, open to reason, full of mercy and good fruits.'",
+    "zh": "舌头是一个小小的舵，掌控大船的方向；是一点小小的火，能点燃大片树林。我们用它颂赞神，也用它咒诅人——这本不该如此。本章随后谈及两种智慧：出于嫉妒和私心的世俗智慧，以及'清洁、和平、温良、柔顺、满有怜悯、多结善果'的从上头来的智慧。",
+    "themes_en": [
+      "Power of the Tongue",
+      "Two Wisdoms",
+      "Earthly vs Heavenly",
+      "Peacemakers",
+      "Taming the Tongue"
+    ],
+    "themes_zh": [
+      "舌头的力量",
+      "两种智慧",
+      "世俗与属天",
+      "使人和睦",
+      "制约舌头"
+    ]
+  },
+  "JAS.4": {
+    "en": "Quarrels among believers come from passions at war within. James diagnoses the root: you do not ask, or you ask wrongly to spend on your passions. Friendship with the world is enmity with God. 'God opposes the proud but gives grace to the humble.' The chapter ends with a warning against arrogant planning that forgets we are a mist.",
+    "zh": "信徒之间的争战源于内心交战的私欲。雅各指出根源：你们不求，或求而不得，因为动机错误，想为了私欲而用。与世界为友就是与神为敌。'神阻挡骄傲的人，赐恩给谦卑的人。'本章以对傲慢计划的警告作结：我们不过是一片云雾，转眼消散。",
+    "themes_en": [
+      "Pride and Humility",
+      "Worldliness",
+      "Jealousy and Conflict",
+      "Submit to God",
+      "Boasting"
+    ],
+    "themes_zh": [
+      "骄傲与谦卑",
+      "世俗化",
+      "嫉妒与纷争",
+      "顺服神",
+      "夸口"
+    ]
+  },
+  "JAS.5": {
+    "en": "A fierce warning to the rich who have hoarded wealth and exploited workers — their gold will corrode and testify against them. Then the pastoral heart: be patient, like a farmer waiting for rain; the Lord's coming is near. Pray for one another — the prayer of a righteous person has great power. Elijah prayed and the rain stopped, and prayed again and it came.",
+    "zh": "对剥削工人、积攒财富的富人发出严厉警告——他们的金银将要生锈，作为见证来控告他们。随后是牧者的心肠：要忍耐，如同农夫等候秋雨春雨；主的来临近了。要彼此代祷——义人祈祷所发的力量是大有功效的。以利亚祷告，天就不下雨；又祷告，天就降雨。",
+    "themes_en": [
+      "Warning to the Rich",
+      "Patience",
+      "Prayer of Faith",
+      "Anointing the Sick",
+      "Second Coming"
+    ],
+    "themes_zh": [
+      "对富人的警告",
+      "忍耐",
+      "信心的祷告",
+      "为病人抹油",
+      "主的再来"
+    ]
+  },
+  "1PE.1": {
+    "en": "Peter addresses scattered believers as 'elect exiles' — chosen yet displaced. Their living hope is grounded in the resurrection of Jesus Christ. The inheritance kept in heaven is imperishable. Suffering now is like gold being refined by fire. The prophets longed to see what these believers have seen; angels long to look into it.",
+    "zh": "彼得向分散各地的信徒说话，称他们为'蒙拣选的寄居者'——蒙拣选却身在异乡。他们的活泼盼望建立在耶稣基督复活的基础上。那在天上为他们存留的基业是不能朽坏的。此时的苦难如同火炼真金。众先知渴望看见这些信徒所看见的；天使也想深究这些事。",
+    "themes_en": [
+      "Living Hope",
+      "Chosen Exiles",
+      "Suffering and Glory",
+      "Holiness",
+      "Precious Blood"
+    ],
+    "themes_zh": [
+      "活泼的盼望",
+      "蒙拣选的寄居者",
+      "受苦与荣耀",
+      "圣洁",
+      "宝血"
+    ]
+  },
+  "1PE.2": {
+    "en": "Believers are living stones being built into a spiritual house, a holy priesthood. Christ is the cornerstone — precious to those who believe, a stumbling stone to those who do not. The identity declaration is stunning: 'You are a chosen race, a royal priesthood, a holy nation, a people for his own possession.' The chapter calls for honourable conduct among the Gentiles and submission to authority.",
+    "zh": "信徒是活石，被建造成灵宫，作圣洁的祭司。基督是房角石——对信者是宝贵的，对不信者是绊脚的石头。身份的宣告令人震撼：'你们是被拣选的族类，是有君尊的祭司，是圣洁的国度，是属神的子民。'本章呼召信徒在外邦人中间行事端正，顺服掌权者。",
+    "themes_en": [
+      "Living Stones",
+      "Royal Priesthood",
+      "Cornerstone",
+      "Submission",
+      "Spiritual House"
+    ],
+    "themes_zh": [
+      "活石",
+      "有君尊的祭司",
+      "房角石",
+      "顺服",
+      "灵宫"
+    ]
+  },
+  "1PE.3": {
+    "en": "Wives and husbands are called to a countercultural beauty: inner character, not outward adornment. The key apologetics verse: 'Always be prepared to give an answer to anyone who asks you for a reason for the hope that is in you — yet do it with gentleness and respect.' Christ suffered for sins once for all, the righteous for the unrighteous, to bring us to God.",
+    "zh": "丈夫和妻子被呼召活出一种逆文化的美丽：内在品格，而非外在装饰。护教学的关键经文：'有人问你们心中盼望的缘由，就要常作准备，以温柔、敬畏的心回答各人。'基督曾一次为罪受苦——就是义的代替不义的——为要引我们到神面前。",
+    "themes_en": [
+      "Gentle Spirit",
+      "Always Be Prepared",
+      "Suffering for Doing Good",
+      "Christ's Death",
+      "Baptism"
+    ],
+    "themes_zh": [
+      "温柔的心",
+      "常作准备",
+      "为善受苦",
+      "基督的受死",
+      "洗礼"
+    ]
+  },
+  "1PE.4": {
+    "en": "Because Christ suffered in the flesh, believers are to arm themselves with the same way of thinking — to live not for human passions but for the will of God. The end of all things is near: be self-controlled and sober-minded for prayer; keep loving one another earnestly; use your gifts to serve. If you suffer as a Christian, do not be ashamed — glorify God in that name.",
+    "zh": "因为基督在肉身受苦，信徒要以同样的心志武装自己——不再随从人的私欲，只随从神的旨意度余下的日子。万物的结局近了：要谨慎自守，警醒祷告；要彼此切实相爱；要用各人所得的恩赐彼此服侍。若因为基督徒的名受苦，不要羞耻，倒要因这名归荣耀给神。",
+    "themes_en": [
+      "Suffering as a Christian",
+      "Use Your Gifts",
+      "End Is Near",
+      "Fiery Trial",
+      "Glorify God"
+    ],
+    "themes_zh": [
+      "为基督徒的名受苦",
+      "用恩赐服侍",
+      "结局近了",
+      "火炼的试验",
+      "荣耀神"
+    ]
+  },
+  "1PE.5": {
+    "en": "Peter addresses elders as a fellow elder: shepherd the flock not under compulsion but willingly, not for shameful gain but eagerly, not lording it over people but being examples. Young people are to clothe themselves with humility. The famous verse: 'Cast all your anxiety on him, because he cares for you.' The devil prowls like a roaring lion — resist him, firm in your faith.",
+    "zh": "彼得以同作长老的身份对长老们说话：牧养神的群羊，不是出于勉强，而是甘心；不是为了私利，而是出于热忱；不是辖制所托付你们的，而是作群羊的榜样。年轻人要以谦卑束腰。那著名的经文：'你们要将一切忧虑卸给神，因为他顾念你们。'魔鬼如同吼叫的狮子——要抵挡它，在信仰上坚定。",
+    "themes_en": [
+      "Shepherding Elders",
+      "Humility",
+      "Casting Anxiety",
+      "Devil as Lion",
+      "Suffering and Glory"
+    ],
+    "themes_zh": [
+      "牧养长老",
+      "谦卑",
+      "卸去忧虑",
+      "魔鬼如狮",
+      "受苦与荣耀"
+    ]
+  },
+  "2PE.1": {
+    "en": "Peter writes as one who knows his death is near. He urges believers to supplement their faith with virtue, knowledge, self-control, steadfastness, godliness, and love — for whoever lacks these is spiritually near-sighted. The eyewitness testimony of the transfiguration confirms the prophetic word about Christ's return. No prophecy of Scripture came from human will, but men spoke from God as they were carried along by the Holy Spirit.",
+    "zh": "彼得写作时知道自己死期将近。他催促信徒在信心上，进一步有品德、知识、节制、忍耐、虔敬，以及爱——因为缺少这些的人属灵上是近视眼。亲历变貌山的见证确认了关于基督再来的预言之道。圣经上的预言没有出于人意的，乃是人被圣灵感动说出神的话来。",
+    "themes_en": [
+      "Growth in Faith",
+      "Eyewitness of Transfiguration",
+      "Inspiration of Scripture",
+      "Divine Nature",
+      "Prophetic Word"
+    ],
+    "themes_zh": [
+      "信心的成长",
+      "变貌山目击者",
+      "圣经的默示",
+      "神的性情",
+      "预言之道"
+    ]
+  },
+  "2PE.2": {
+    "en": "A vivid and unflinching portrait of false teachers: they secretly bring in destructive heresies, exploit believers with false words, and indulge in sensual pleasures — like irrational animals born to be caught and destroyed. Peter reaches back to Noah and Lot to show that God knows how to rescue the godly and hold the unrighteous for punishment. It would have been better for them never to have known the way of righteousness.",
+    "zh": "对假教师的生动而毫不留情的描绘：他们暗中引入毁灭性的异端，用假言语剥削信徒，放纵肉体的私欲——如同生来就是要被捉拿宰杀的没有理性的畜生。彼得追溯到挪亚和罗得，说明神知道如何搭救敬虔的人，也能把不义的人留在刑罚之下。对他们来说，认识义路之后又离弃，倒不如不认识。",
+    "themes_en": [
+      "False Teachers",
+      "Judgment",
+      "Rescue of the Godly",
+      "Sensuality",
+      "Apostasy"
+    ],
+    "themes_zh": [
+      "假教师",
+      "审判",
+      "搭救敬虔者",
+      "淫荡放纵",
+      "离弃"
+    ]
+  },
+  "2PE.3": {
+    "en": "Scoffers will come asking: 'Where is the promise of his coming?' Peter answers: God is not slow; he is patient, not wishing that any should perish but that all should reach repentance. The Day of the Lord will come like a thief. The heavens and earth will be dissolved in fire and renewed. 'Since all these things are thus to be dissolved, what sort of people ought you to be?'",
+    "zh": "嘲笑者将来说：'他所应许的降临在哪里呢？'彼得回答：主所应许的尚未成就，不是耽延，乃是宽容，不愿有一人沉沦，乃愿人人都悔改。主的日子要像贼一样来到。众天和地都将在火中消失，然后更新。'这一切既然都要消融，你们为人该当怎样圣洁、怎样敬虔呢？'",
+    "themes_en": [
+      "Day of the Lord",
+      "God's Patience",
+      "Scoffers",
+      "New Creation",
+      "Holy Living"
+    ],
+    "themes_zh": [
+      "主的日子",
+      "神的宽容",
+      "嘲笑者",
+      "新创造",
+      "圣洁生活"
+    ]
+  },
+  "1JN.1": {
+    "en": "John writes as an eyewitness of the Word of life — he saw, heard, and touched him. The purpose of the letter is fellowship: with the Father and the Son, and with one another. The foundational declaration is that God is light, and in him is no darkness at all. If we claim to have no sin we deceive ourselves; but if we confess, God is faithful and just to forgive and cleanse.",
+    "zh": "约翰以生命之道目击者的身份写作——他看见了、听见了、亲手摸过了。这封书信的目的是相交：与父和子相交，也彼此相交。根基性的宣告是：神就是光，在他毫无黑暗。我们若说自己无罪，便是自欺；但我们若认罪，神是信实公义的，必要赦免我们的罪，洗净我们一切的不义。",
+    "themes_en": [
+      "Eyewitness Testimony",
+      "Fellowship",
+      "God Is Light",
+      "Confession",
+      "Cleansing from Sin"
+    ],
+    "themes_zh": [
+      "目击者见证",
+      "相交",
+      "神就是光",
+      "认罪",
+      "从罪洁净"
+    ]
+  },
+  "1JN.2": {
+    "en": "Jesus Christ is our advocate before the Father — the propitiation for our sins and the sins of the whole world. The test of knowing God is keeping his commandments. The old-and-new commandment is to love your brother. Warning: do not love the world. The 'last hour' is here — many antichrists have come. The anointing of the Spirit teaches believers all things; they need not be led astray.",
+    "zh": "耶稣基督在父面前为我们作代求者——他是我们罪的挽回祭，也是普天下人罪的挽回祭。认识神的凭据是遵守他的命令。那又旧又新的命令是爱弟兄。警告：不要爱世界。'末时'已经到了——许多敌基督者出现了。圣灵的恩膏教导信徒一切，他们不需要被引入迷途。",
+    "themes_en": [
+      "Advocacy",
+      "Propitiation",
+      "Antichrist",
+      "Love Not the World",
+      "Anointing of the Spirit"
+    ],
+    "themes_zh": [
+      "代求者",
+      "挽回祭",
+      "敌基督",
+      "不要爱世界",
+      "圣灵的恩膏"
+    ]
+  },
+  "1JN.3": {
+    "en": "Lavish love: 'See what kind of love the Father has given to us, that we should be called children of God.' The child of God does not keep on sinning; the child of the devil does. The practical test is crystal clear — whoever does not love his brother is not of God. We know love by this: Jesus laid down his life. We ought to lay down our lives for the brothers.",
+    "zh": "丰盛的爱：'你们看，父赐给我们是何等的爱，使我们得称为神的儿女。'神的儿女不继续犯罪；魔鬼的儿女则相反。实践性的测验清晰明了——凡不爱弟兄的就不是出于神。我们由此知道爱：耶稣为我们舍命。我们也当为弟兄舍命。",
+    "themes_en": [
+      "Children of God",
+      "Love One Another",
+      "Sin and the New Nature",
+      "Laying Down Life",
+      "Confidence before God"
+    ],
+    "themes_zh": [
+      "神的儿女",
+      "彼此相爱",
+      "罪与新性情",
+      "舍命",
+      "坦然见神"
+    ]
+  },
+  "1JN.4": {
+    "en": "Test the spirits — not every spirit is from God. The spirit of antichrist denies that Jesus has come in the flesh. The heart of the chapter is a meditation on love: 'God is love.' He loved us first; he sent his Son as propitiation. 'There is no fear in love, but perfect love casts out fear.' We love because he first loved us.",
+    "zh": "要辨别诸灵——不是所有的灵都出于神。敌基督的灵否认耶稣是道成肉身而来。本章的核心是对爱的沉思：'神就是爱。'他先爱了我们，差遣他的儿子作我们罪的挽回祭。'爱里没有惧怕，爱既完全，就把惧怕除去。'我们爱，因为神先爱了我们。",
+    "themes_en": [
+      "Test the Spirits",
+      "God Is Love",
+      "Perfect Love Casts Out Fear",
+      "Incarnation",
+      "First Love"
+    ],
+    "themes_zh": [
+      "辨别诸灵",
+      "神就是爱",
+      "爱把惧怕除去",
+      "道成肉身",
+      "神先爱我们"
+    ]
+  },
+  "1JN.5": {
+    "en": "Everyone who believes that Jesus is the Christ has been born of God. The three witnesses — the Spirit, the water, and the blood — agree. Eternal life is in the Son; whoever has the Son has life. John closes with pastoral assurance: we know we have eternal life; we know God hears our prayers; we know the Son of God has come. The final warning: keep yourselves from idols.",
+    "zh": "凡信耶稣是基督的，都是从神而生的。三个见证——圣灵、水、血——彼此相符。永生在子里面；人有了子，就有永生。约翰以牧者的确据作结：我们知道我们有永生；我们知道神听我们的祷告；我们知道神的儿子已经来到。最后的警告：要远离偶像。",
+    "themes_en": [
+      "Assurance of Eternal Life",
+      "Three Witnesses",
+      "Faith Overcomes the World",
+      "Prayer and Confidence",
+      "Guard from Idols"
+    ],
+    "themes_zh": [
+      "永生的确据",
+      "三个见证",
+      "信心胜过世界",
+      "祷告与信心",
+      "远离偶像"
+    ]
+  },
+  "3JN.1": {
+    "en": "The shortest letter in the New Testament is intensely personal. John commends Gaius for his faithfulness and his hospitality to travelling missionaries. He rebukes the power-hungry Diotrephes, who refuses to welcome the brothers and expels those who do. He commends Demetrius. The letter is a window into how the early church was held together — or torn apart — by leaders' character.",
+    "zh": "新约最短的书信极具个人色彩。约翰称赞该犹的忠心和对传道者的款待。他责备好为首、不接待弟兄、反将接待弟兄的人赶出教会的丢特腓。他称赞底米丢。这封书信让我们看见初期教会如何因领袖的品格而凝聚或撕裂。",
+    "themes_en": [
+      "Hospitality",
+      "Church Leadership",
+      "Character",
+      "Truth",
+      "Walking in Truth"
+    ],
+    "themes_zh": [
+      "款待",
+      "教会领导",
+      "品格",
+      "真理",
+      "遵行真理"
+    ]
+  },
+  "JUD.1": {
+    "en": "Jude had intended to write about salvation — but instead felt compelled to urge contending for the faith, because ungodly people had crept in. He marshals examples from Israel's history and Enoch's prophecy. His prescription: build yourselves up in faith, pray in the Spirit, keep yourselves in God's love. The letter closes with one of the New Testament's most magnificent doxologies.",
+    "zh": "犹大本想写关于救恩的文章，却感到不得不催促信徒为真道竭力争辩，因为有些不敬虔的人偷偷混入了。他引用以色列历史和以诺的预言为证。他的处方：在至圣的真道上建立自己，在圣灵里祷告，保守自己在神的爱中。书信以新约中最壮丽的颂赞之一作结。",
+    "themes_en": [
+      "Contend for the Faith",
+      "False Teachers",
+      "Keep Yourselves in God's Love",
+      "Historical Warnings",
+      "Doxology"
+    ],
+    "themes_zh": [
+      "为真道争辩",
+      "假教师",
+      "保守在神的爱中",
+      "历史的警告",
+      "颂赞"
+    ]
+  },
+  "REV.1": {
+    "en": "The Revelation of Jesus Christ — given to John on Patmos, the island of his exile. John hears a loud voice and turns to see seven golden lampstands, and among them one like a Son of Man — hair white as snow, eyes like flame, feet like bronze, voice like rushing waters, a two-edged sword from his mouth. 'Fear not, I am the first and the last and the living one.'",
+    "zh": "耶稣基督的启示——赐给在拔摩岛流放的约翰。约翰听见一个大声音，转身看见七个金灯台，其中有一位像人子——头发白如雪，眼睛如火焰，脚好像在炉中锻炼的铜，声音如同众水的声音，口中有双刃的利剑。'不要惧怕！我是首先的，我是末后的，又是那存活的。'",
+    "themes_en": [
+      "Vision of the Risen Christ",
+      "Exalted Son of Man",
+      "Patmos",
+      "Fear Not",
+      "Seven Churches"
+    ],
+    "themes_zh": [
+      "复活基督的异象",
+      "尊贵的人子",
+      "拔摩岛",
+      "不要惧怕",
+      "七个教会"
+    ]
+  },
+  "REV.2": {
+    "en": "Letters to four churches: Ephesus (left its first love), Smyrna (poor yet rich, facing persecution), Pergamum (tolerating false teaching), and Thyatira (tolerating Jezebel). Each letter opens with a description of Christ drawn from chapter one, diagnoses the church, and closes with a promise to the one who conquers. The risen Lord walks among his churches and knows them intimately.",
+    "zh": "给四个教会的信：以弗所（离弃了起初的爱心）、士每拿（虽贫穷却富足，面临逼迫）、别迦摩（容忍假教训）、推雅推喇（容忍耶洗别）。每封信都以第一章对基督的描述开篇，诊断教会现状，以对得胜者的应许作结。复活的主行走在他的教会中，深切了解她们。",
+    "themes_en": [
+      "Letters to Churches",
+      "First Love",
+      "Persecution",
+      "False Teaching",
+      "Overcoming"
+    ],
+    "themes_zh": [
+      "给教会的信",
+      "起初的爱心",
+      "逼迫",
+      "假教训",
+      "得胜"
+    ]
+  },
+  "REV.3": {
+    "en": "Letters to three more churches: Sardis (a reputation for being alive but dead), Philadelphia (little strength yet faithful — an open door no one can shut), and Laodicea (lukewarm — neither hot nor cold, about to be spit out). The Laodiceans think they are rich; Christ sees them as wretched. He stands at the door and knocks: 'If anyone hears my voice and opens the door, I will come in.'",
+    "zh": "给另外三个教会的信：撒狄（有活着的名声，其实已经死了）、非拉铁非（力量虽小却忠心——那没有人能关的敞开的门）、老底嘉（不冷不热——将要被吐出）。老底嘉人以为自己富足，基督却看见他们是困苦可怜的。他站在门外叩门：'若有听见我声音就开门的，我要进到他那里去。'",
+    "themes_en": [
+      "Open Door",
+      "Lukewarmness",
+      "Repentance",
+      "Dead Church",
+      "Christ Knocking"
+    ],
+    "themes_zh": [
+      "敞开的门",
+      "不冷不热",
+      "悔改",
+      "死了的教会",
+      "基督叩门"
+    ]
+  },
+  "REV.4": {
+    "en": "A door opens in heaven and John is caught up in the Spirit to see the throne room of God. The One on the throne radiates jasper and carnelian. Twenty-four elders cast their crowns before him. Four living creatures never stop saying: 'Holy, holy, holy, is the Lord God Almighty, who was and is and is to come.' All creation worships the Creator.",
+    "zh": "天上有门开了，约翰在灵里被带到神宝座的异象前。坐在宝座上的，好像碧玉和红宝石。二十四位长老将冠冕投在宝座前。四个活物昼夜不停地说：'圣哉！圣哉！圣哉！主神是全能的，昔在、今在、以后永在的。'所有受造物都敬拜创造主。",
+    "themes_en": [
+      "Heavenly Throne",
+      "Worship",
+      "Holy Holy Holy",
+      "Four Living Creatures",
+      "Elders"
+    ],
+    "themes_zh": [
+      "天上宝座",
+      "敬拜",
+      "圣哉圣哉圣哉",
+      "四个活物",
+      "二十四长老"
+    ]
+  },
+  "REV.5": {
+    "en": "A sealed scroll in God's right hand — no one in heaven or earth is worthy to open it. John weeps. Then one of the elders: 'Do not weep. The Lion of the tribe of Judah has conquered.' John looks and sees — not a lion, but a Lamb, standing as though slain. The Lamb takes the scroll and the entire cosmos erupts in worship: 'Worthy is the Lamb who was slain!'",
+    "zh": "神右手中有一本书卷——天上地下没有人能展开、看那书卷。约翰就大哭。然后一位长老说：'不要哭，你看，犹大支派中的狮子已经得胜，能展开那书卷。'约翰看见的不是狮子，而是羔羊，像是被杀过的，站在宝座中间。羔羊接了书卷，整个宇宙爆发出敬拜：'曾被杀的羔羊是配得权柄的！'",
+    "themes_en": [
+      "Worthy Is the Lamb",
+      "Lion and Lamb",
+      "Sealed Scroll",
+      "Heavenly Worship",
+      "Redemption"
+    ],
+    "themes_zh": [
+      "羔羊配得",
+      "狮子与羔羊",
+      "书卷",
+      "天上的敬拜",
+      "救赎"
+    ]
+  },
+  "REV.6": {
+    "en": "The first six seals are opened. The famous four horsemen ride out: conquest, war, famine, death. The fifth seal reveals the souls of martyrs crying under the altar: 'How long, O Lord?' The sixth seal brings cosmic catastrophe — sun darkened, moon red, stars falling. The great question: 'Who can stand?'",
+    "zh": "头六个印被揭开。著名的四骑士出现：征服、战争、饥荒、死亡。第五个印显出众殉道者的灵魂在祭坛下呼喊：'主啊，你不审判、不伸我们的冤，要等到几时呢？'第六个印带来宇宙大灾变——太阳变黑、月亮如血、星辰坠落。那大问题：'谁能站得住呢？'",
+    "themes_en": [
+      "Four Horsemen",
+      "Martyrs",
+      "Six Seals",
+      "Cosmic Signs",
+      "Day of Wrath"
+    ],
+    "themes_zh": [
+      "四骑士",
+      "殉道者",
+      "六个印",
+      "宇宙异象",
+      "忿怒的日子"
+    ]
+  },
+  "REV.7": {
+    "en": "An interlude of grace before the seventh seal. First: 144,000 are sealed from the twelve tribes of Israel — God's people are protected. Then a vision of an innumerable multitude from every nation, tribe, people and language, standing before the throne in white robes, crying: 'Salvation belongs to our God and to the Lamb!' These are the ones coming out of the great tribulation, whose robes are washed white in the blood of the Lamb.",
+    "zh": "第七个印之前的恩典插曲。首先：以色列十二支派各一万二千人受了印记——神的子民得到保护。随后是来自各国各族各民各方、无人能数的大群众的异象，他们穿着白袍站在宝座前，呼喊：'救恩属于我们的神和羔羊！'这些是从大患难中出来的，曾用羔羊的血把袍子洗白净了。",
+    "themes_en": [
+      "144,000 Sealed",
+      "Great Multitude",
+      "Great Tribulation",
+      "White Robes",
+      "Salvation Belongs to God"
+    ],
+    "themes_zh": [
+      "十四万四千人",
+      "大群众",
+      "大患难",
+      "白袍",
+      "救恩属于神"
+    ]
+  },
+  "REV.8": {
+    "en": "The seventh seal is opened — and there is silence in heaven for half an hour. Then seven angels receive seven trumpets. An angel fills a censer with fire from the altar and hurls it to the earth: thunder, lightning, earthquake. The first four trumpets devastate earth, sea, rivers, and sky. An eagle cries: 'Woe, woe, woe to those who dwell on the earth!'",
+    "zh": "第七个印被揭开——天上寂静约有半小时。随后七位天使获得七枝号角。一位天使把香炉盛满坛上的火，抛在地上：有雷轰、大声、闪电、地震。头四枝号角的灾祸降临地、海、江河和天空。一只鹰高声说：'祸哉，祸哉，祸哉，住在地上的人哪！'",
+    "themes_en": [
+      "Seventh Seal",
+      "Seven Trumpets",
+      "Heavenly Silence",
+      "Incense and Prayer",
+      "Four Plagues"
+    ],
+    "themes_zh": [
+      "第七个印",
+      "七枝号角",
+      "天上的寂静",
+      "香和祷告",
+      "四样灾祸"
+    ]
+  },
+  "REV.9": {
+    "en": "The fifth trumpet unleashes a plague of demonic locusts from the bottomless pit — their king is Abaddon, the angel of the abyss. The sixth trumpet releases four angels bound at the Euphrates: an army of two hundred million. Yet amid all this judgment, 'the rest of mankind who were not killed by these plagues did not repent.' Judgment without repentance is the tragedy of hard hearts.",
+    "zh": "第五枝号角释放出无底坑中的蝗虫灾祸——他们的王是无底坑的使者亚巴顿。第六枝号角释放四个被捆绑在伯拉大河的天使：两万万的大军。然而在这一切审判之中，'其余未曾被这些灾害所杀的人，仍旧不悔改。'不悔改的审判正是刚硬之心的悲剧。",
+    "themes_en": [
+      "Locust Plague",
+      "Sixth Trumpet",
+      "Abyss",
+      "Unrepentant Hearts",
+      "Judgment"
+    ],
+    "themes_zh": [
+      "蝗虫之灾",
+      "第六枝号",
+      "无底坑",
+      "不悔改的心",
+      "审判"
+    ]
+  },
+  "REV.10": {
+    "en": "An interlude: a mighty angel straddles sea and land, holding a small scroll. He gives a great shout like a lion's roar. John is told to take the scroll and eat it — sweet as honey in his mouth, bitter in his stomach. This is the prophet's calling: the word of God is sweet to receive but its content of judgment is bitter to proclaim. John must prophesy again.",
+    "zh": "一个插曲：一位大力的天使一脚踏海，一脚踏地，手里拿着一本小书卷。他大声呼喊，声音如同狮子吼叫。约翰被吩咐取那小书卷吃下——在口中甜如蜜，吃了之后肚子里就苦了。这是先知的呼召：神的话语领受时是甜的，但其审判的内容传讲起来是苦的。约翰必须再说预言。",
+    "themes_en": [
+      "Little Scroll",
+      "Sweet and Bitter",
+      "Prophet's Calling",
+      "Mighty Angel",
+      "Prophesying Again"
+    ],
+    "themes_zh": [
+      "小书卷",
+      "甜与苦",
+      "先知的呼召",
+      "大力的天使",
+      "再说预言"
+    ]
+  },
+  "REV.11": {
+    "en": "Two witnesses prophesy for 1,260 days — they have power to shut the sky and turn water to blood. The beast from the abyss kills them; their bodies lie in the street while the world celebrates. Then they are resurrected and ascend to heaven. The seventh trumpet sounds and heaven erupts: 'The kingdom of the world has become the kingdom of our Lord and of his Christ, and he shall reign forever and ever.'",
+    "zh": "两个见证人传道一千二百六十天——他们有权柄止住天不下雨，也能使水变为血。那从无底坑上来的兽与他们争战，杀了他们；他们的尸首躺在街上，世界欢庆。然后他们复活升天。第七枝号角吹响，天上爆发出声音：'世上的国成了我主和他基督的国，他要作王，直到永永远远！'",
+    "themes_en": [
+      "Two Witnesses",
+      "Seventh Trumpet",
+      "Kingdom of Our Lord",
+      "Resurrection",
+      "Temple Measured"
+    ],
+    "themes_zh": [
+      "两个见证人",
+      "第七枝号",
+      "我主的国",
+      "复活",
+      "量圣殿"
+    ]
+  },
+  "REV.12": {
+    "en": "A great sign: a woman clothed with the sun gives birth to a male child who is caught up to God. The dragon is thrown down from heaven. 'Now the salvation and the power and the kingdom of our God have come.' The dragon pursues the woman into the wilderness — she is protected for a time. War in heaven is resolved, but the dragon comes down to earth in great wrath.",
+    "zh": "一个大异象：一个披着太阳的妇人生了一个男孩，那孩子被提到神那里去。龙被摔在地上。'现在得救恩、得能力、得国度，是我们神和他基督的权柄来到了。'龙追逐那妇人进旷野——她在那里受保护了一段时期。天上的争战已定局，但龙怒气冲冲地下到地上来。",
+    "themes_en": [
+      "Woman and Dragon",
+      "War in Heaven",
+      "Salvation and Kingdom",
+      "Satan Cast Down",
+      "Protection in the Wilderness"
+    ],
+    "themes_zh": [
+      "妇人与龙",
+      "天上的争战",
+      "救恩与国度",
+      "撒但被摔下",
+      "旷野中的保护"
+    ]
+  },
+  "REV.13": {
+    "en": "Two beasts: one rises from the sea with ten horns and seven heads — the whole earth follows it in worship. One rises from the land — it makes fire come down from heaven and causes all to worship the first beast. The number of the beast is 666 — the number of a man. This chapter is a portrait of political and religious power co-opted for evil and demanding the worship that belongs to God alone.",
+    "zh": "两只兽：一只从海中上来，有十角七头——全地的人都跟从拜它。另一只从地中上来——叫火从天降下，叫众人拜第一只兽。兽的数目是六百六十六——是人的数目。本章描绘政治与宗教权力如何被恶所利用，要求属于神的敬拜。",
+    "themes_en": [
+      "Beast from the Sea",
+      "Beast from the Land",
+      "666",
+      "False Worship",
+      "Antichrist Power"
+    ],
+    "themes_zh": [
+      "从海中上来的兽",
+      "从地中上来的兽",
+      "六六六",
+      "假冒敬拜",
+      "敌基督势力"
+    ]
+  },
+  "REV.14": {
+    "en": "Three contrasting visions: first the 144,000 with the Lamb on Mount Zion, singing a new song — the redeemed first fruits. Then three angels: the eternal gospel proclaimed to all nations; Babylon has fallen; whoever worships the beast will drink the wine of God's wrath. Finally the harvest of the earth — grain and grapes — the great winepress of God's wrath.",
+    "zh": "三个对比鲜明的异象：首先是十四万四千人与羔羊同站在锡安山上，唱新歌——被救赎的初熟果子。随后是三位天使：将永远的福音传给万国；巴比伦倒塌了；凡拜兽的都必喝神忿怒的酒。最后是地上的收割——禾稼和葡萄——神忿怒的大酒榨。",
+    "themes_en": [
+      "144,000 and the Lamb",
+      "Eternal Gospel",
+      "Fall of Babylon",
+      "Harvest",
+      "Wrath of God"
+    ],
+    "themes_zh": [
+      "十四万四千人与羔羊",
+      "永远的福音",
+      "巴比伦倒塌",
+      "收割",
+      "神的忿怒"
+    ]
+  },
+  "REV.15": {
+    "en": "A prelude to the final seven plagues. John sees those who had conquered the beast standing on a sea of glass mingled with fire, singing the Song of Moses and the Song of the Lamb: 'Great and amazing are your deeds, O Lord God the Almighty!' Seven angels emerge from the temple clothed in pure white linen. No one could enter the temple until the seven plagues were completed.",
+    "zh": "最后七灾的序幕。约翰看见那些胜了兽的人站在玻璃海边，弹琴唱摩西之歌和羔羊之歌：'主神，全能者啊，你的作为大哉！奇哉！'七位天使从圣殿里出来，穿着洁白的细麻衣。七灾完毕以前，没有人能以进入圣殿。",
+    "themes_en": [
+      "Seven Last Plagues",
+      "Song of Moses",
+      "Song of the Lamb",
+      "Glass Sea",
+      "Heavenly Temple"
+    ],
+    "themes_zh": [
+      "最后七灾",
+      "摩西之歌",
+      "羔羊之歌",
+      "玻璃海",
+      "天上圣殿"
+    ]
+  },
+  "REV.16": {
+    "en": "The seven bowls of God's wrath are poured out on the earth — painful sores, sea turned to blood, rivers turned to blood, scorching heat, darkness, the Euphrates dried up. Kings are gathered to Armageddon. The seventh bowl: 'It is done!' A great earthquake splits the great city. God remembers Babylon.",
+    "zh": "七碗神的忿怒倒在地上——毒疮、海变为血、江河变为血、烈日焦灼、黑暗降临、伯拉大河枯干。列王被聚集到哈米吉多顿。第七碗：'成了！'大地震撼，那大城裂为三段。神记念大巴比伦。",
+    "themes_en": [
+      "Seven Bowls",
+      "Armageddon",
+      "It Is Done",
+      "God's Wrath",
+      "Great Earthquake"
+    ],
+    "themes_zh": [
+      "七碗",
+      "哈米吉多顿",
+      "成了",
+      "神的忿怒",
+      "大地震"
+    ]
+  },
+  "REV.17": {
+    "en": "The great prostitute Babylon is revealed — arrayed in purple and scarlet, drunk with the blood of the saints. She rides the scarlet beast. An angel explains: the beast was and is not and is to come, a parody of the true God. The ten kings who give their power to the beast will war against the Lamb — and the Lamb will conquer, for he is Lord of lords and King of kings.",
+    "zh": "大淫妇巴比伦显现——身穿紫色朱红色衣服，醉于圣徒的血。她骑在那朱红色的兽上。天使解释：那兽曾有、如今没有、将要上来——这是对真神的拙劣模仿。十王将权柄给了兽，与羔羊争战——但羔羊必得胜，因他是万主之主、万王之王。",
+    "themes_en": [
+      "Babylon the Prostitute",
+      "Scarlet Beast",
+      "Lord of Lords",
+      "War against the Lamb",
+      "Mystery Babylon"
+    ],
+    "themes_zh": [
+      "大淫妇巴比伦",
+      "朱红色的兽",
+      "万王之王",
+      "与羔羊争战",
+      "神秘的巴比伦"
+    ]
+  },
+  "REV.18": {
+    "en": "Babylon has fallen! An angel illumines the earth with his glory, announcing her doom. Kings, merchants, and sailors who grew rich from her wail at the sight of her smoke. 'Come out of her, my people, lest you take part in her sins.' Her music, her craftsmen, her merchants will be heard and seen no more. 'In her was found the blood of prophets and of saints.'",
+    "zh": "巴比伦倒塌了！一位天使以他的荣耀照亮大地，宣告她的毁灭。那些靠她致富的君王、商人和船员望见她焚烧的烟，痛哭哀号。'我的民哪，你们要从那城出来，免得与她一同有罪。'她的音乐、她的工匠、她的商人将永远不再被听见、被看见。'在她那里有先知和圣徒的血。'",
+    "themes_en": [
+      "Fall of Babylon",
+      "Come Out of Her",
+      "Economic Judgment",
+      "Mourning",
+      "Blood of the Saints"
+    ],
+    "themes_zh": [
+      "巴比伦倒塌",
+      "从那城出来",
+      "经济审判",
+      "哀哭",
+      "圣徒的血"
+    ]
+  },
+  "REV.19": {
+    "en": "Hallelujah! Heaven erupts in worship over Babylon's judgment. The marriage of the Lamb has come — his bride has made herself ready, clothed in fine linen, bright and pure. Then heaven opens: a white horse, and its rider is called Faithful and True. He judges and makes war in righteousness. His name is the Word of God. The beast and the false prophet are thrown into the lake of fire.",
+    "zh": "哈利路亚！天上因巴比伦受审判而爆发出敬拜。羔羊的婚宴到了——新妇已经自己预备好了，穿着光明洁白的细麻衣。随后天开了：一匹白马，骑马者称为诚信真实，他以公义审判并争战。他的名字是神之道。兽和假先知被扔在火湖里。",
+    "themes_en": [
+      "Hallelujah",
+      "Marriage of the Lamb",
+      "Rider on White Horse",
+      "Word of God",
+      "Beast Defeated"
+    ],
+    "themes_zh": [
+      "哈利路亚",
+      "羔羊的婚宴",
+      "白马骑士",
+      "神之道",
+      "兽被击败"
+    ]
+  },
+  "REV.20": {
+    "en": "The millennium: Satan is bound for a thousand years; martyrs reign with Christ. Then Satan is released and makes one final assault — immediately consumed by fire. The great white throne of judgment: death and Hades give up their dead. Anyone whose name is not in the book of life is thrown into the lake of fire, which is the second death.",
+    "zh": "千禧年：撒但被捆绑一千年；众殉道者与基督同作王。随后撒但被释放，发动最后一次进攻——立即被火吞灭。大白色宝座的审判：死亡和阴间将其中的死人都交了出来。凡名字没有记在生命册上的，都被扔在火湖里，这是第二次的死。",
+    "themes_en": [
+      "Millennium",
+      "Satan Bound",
+      "Great White Throne",
+      "Book of Life",
+      "Second Death"
+    ],
+    "themes_zh": [
+      "千禧年",
+      "撒但被捆绑",
+      "大白色宝座",
+      "生命册",
+      "第二次的死"
+    ]
+  },
+  "REV.21": {
+    "en": "And I saw a new heaven and a new earth — the first heaven and earth had passed away. The holy city, new Jerusalem, comes down from God, prepared as a bride adorned for her husband. 'Behold, the dwelling place of God is with man. He will dwell with them, and they will be his people, and God himself will be with them as their God. He will wipe away every tear from their eyes.'",
+    "zh": "我又看见一个新天新地——因为先前的天地已经过去了。圣城新耶路撒冷由神那里从天而降，预备好了，如同新妇妆饰整齐，等候丈夫。'看哪，神的帐幕在人间。他要与人同住，他们要作他的子民，神要亲自与他们同在，作他们的神。神要擦去他们一切的眼泪。'",
+    "themes_en": [
+      "New Heaven and Earth",
+      "New Jerusalem",
+      "God with Humanity",
+      "No More Tears",
+      "All Things New"
+    ],
+    "themes_zh": [
+      "新天新地",
+      "新耶路撒冷",
+      "神与人同在",
+      "不再有眼泪",
+      "一切都更新了"
+    ]
+  },
+  "REV.22": {
+    "en": "The river of the water of life flows from the throne of God and the Lamb. The tree of life bears fruit every month; its leaves are for the healing of the nations. No more curse. 'I am the Alpha and the Omega, the first and the last, the beginning and the end.' The Spirit and the Bride say: Come. And let the one who is thirsty come. 'Surely I am coming soon.' Amen. Come, Lord Jesus!",
+    "zh": "生命水的河从神和羔羊的宝座流出。生命树每月结果，叶子为医治万民。再没有咒诅。'我是阿拉法，我是俄梅戛，我是首先的，我是末后的，我是初，我是终。'圣灵和新妇都说：来！口渴的人也当来。'我必快来。'阿们！主耶稣啊，我愿你来！",
+    "themes_en": [
+      "River of Life",
+      "Tree of Life",
+      "Come Lord Jesus",
+      "Alpha and Omega",
+      "No More Curse"
+    ],
+    "themes_zh": [
+      "生命水的河",
+      "生命树",
+      "主耶稣啊请来",
+      "阿拉法与俄梅戛",
+      "再没有咒诅"
+    ]
+  }
 }
