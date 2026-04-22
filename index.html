@@ -421,8 +421,7 @@
           </div>
         </a>
         ${tyndaleURL ? `
-        <a class="resource-card" href="${tyndaleURL}" target="_blank"
-           onclick="trackClick('tyndale/${entry.book}-${entry.chapter}')">
+        <a class="resource-card" href="${tyndaleURL}" target="_blank">
           <span class="resource-icon">📚</span>
           <div>
             <h3 data-lang="en">Tyndale Commentary — ${entry.book} ${entry.chapter}</h3>
@@ -527,16 +526,7 @@
     render();
   })();
 
-  function trackClick(path) {
-    if (window.goatcounter && window.goatcounter.count) {
-      window.goatcounter.count({ path, title: path });
-    }
-  }
 </script>
-
-<!-- GoatCounter analytics — replace YOUR_CODE with your goatcounter.com site code -->
-<script data-goatcounter="https://YOUR_CODE.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
