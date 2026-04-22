@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>丁道尔注释 · Tyndale Commentary</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #404040; font-family: Georgia, serif; }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #2b2b2b;
+      color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      gap: 12px;
+    }
+
+    .toolbar a {
+      color: #aaa;
+      font-size: 12px;
+      text-decoration: none;
+    }
+    .toolbar a:hover { color: #fff; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav button {
+      background: #444;
+      color: #eee;
+      border: none;
+      padding: 5px 14px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .nav button:hover { background: #555; }
+    .nav button:disabled { opacity: 0.3; cursor: default; }
+
+    #page-info { font-size: 13px; min-width: 80px; text-align: center; }
+
+    #canvas-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    canvas {
+      max-width: 100%;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+      background: #fff;
+    }
+
+    #loading {
+      color: #ccc;
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 14px;
+    }
+
+    #error {
+      display: none;
+      color: #f88;
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a href="javascript:history.back()">← Back</a>
+  <div class="nav">
+    <button id="btn-prev" onclick="changePage(-1)" disabled>‹</button>
+    <span id="page-info">…</span>
+    <button id="btn-next" onclick="changePage(1)" disabled>›</button>
+  </div>
+  <span style="font-size:12px;color:#888;">丁道尔注释</span>
+</div>
+
+<div id="canvas-wrap">
+  <div id="loading">Loading commentary…</div>
+  <div id="error">Failed to load PDF.</div>
+  <canvas id="canvas" style="display:none"></canvas>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  const params  = new URLSearchParams(location.search);
+  const file    = params.get('file');
+  const startPg = parseInt(params.get('page') || '1', 10);
+
+  let pdfDoc      = null;
+  let currentPage = startPg;
+  let rendering   = false;
+
+  async function init() {
+    if (!file) { showError(); return; }
+    try {
+      pdfDoc = await pdfjsLib.getDocument(file).promise;
+      await renderPage(startPg);
+    } catch (e) {
+      console.error(e);
+      showError();
+    }
+  }
+
+  async function renderPage(num) {
+    if (rendering) return;
+    rendering = true;
+    const page     = await pdfDoc.getPage(num);
+    const scale    = Math.min(window.innerWidth - 32, 900) / page.getViewport({ scale: 1 }).width;
+    const viewport = page.getViewport({ scale });
+    const canvas   = document.getElementById('canvas');
+    const ctx      = canvas.getContext('2d');
+    canvas.width   = viewport.width;
+    canvas.height  = viewport.height;
+    await page.render({ canvasContext: ctx, viewport }).promise;
+    currentPage = num;
+    document.getElementById('loading').style.display = 'none';
+    canvas.style.display = 'block';
+    document.getElementById('page-info').textContent = `${num} / ${pdfDoc.numPages}`;
+    document.getElementById('btn-prev').disabled = num <= 1;
+    document.getElementById('btn-next').disabled = num >= pdfDoc.numPages;
+    rendering = false;
+  }
+
+  function changePage(delta) {
+    const next = currentPage + delta;
+    if (next >= 1 && next <= pdfDoc.numPages) renderPage(next);
+  }
+
+  function showError() {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error').style.display   = 'block';
+  }
+
+  init();
+</script>
+</body>
+</html>

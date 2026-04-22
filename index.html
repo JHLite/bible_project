@@ -457,11 +457,7 @@
     if (!entry) return null;
     const pg = (entry.pages || {})[String(chapter)];
     if (!pg) return null;
-    // Use absolute GitHub Pages URL so browsers open inline (correct Content-Type)
-    // rather than downloading (which happens with local dev servers).
-    // Chrome/Firefox/Edge native PDF viewers honour the #page=N fragment.
-    const base = 'https://jhlite.github.io/bible_project/';
-    return base + entry.pdf + '#page=' + pg;
+    return `pdfviewer.html?file=${encodeURIComponent(entry.pdf)}&page=${pg}`;
   }
 
   function refToBlueLetterPath(ref) {
