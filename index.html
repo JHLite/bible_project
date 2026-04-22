@@ -253,8 +253,8 @@
   let currentDate  = todayStr();
   let rota         = {};
   let chineseData  = {};
+  let xinyiData    = {};
   let nivData      = {};
-  let nkjvData     = {};
   let commentary   = {};
   let tyndaleData  = {};
   let activeBible  = 'zh';
@@ -292,19 +292,19 @@
 
   // ── Load data ────────────────────────────────────────────────────────────
   async function loadData() {
-    const [rotaRes, zhRes, commRes, nivRes, nkjvRes, tynRes] = await Promise.all([
+    const [rotaRes, zhRes, xinyiRes, commRes, nivRes, tynRes] = await Promise.all([
       fetch('data/rota.json'),
       fetch('data/chinese_bible.json'),
+      fetch('data/xinyi_bible.json'),
       fetch('data/commentary.json'),
       fetch('data/niv.json'),
-      fetch('data/nkjv.json'),
       fetch('data/tyndale_pages.json'),
     ]);
     rota        = await rotaRes.json();
     chineseData = await zhRes.json();
+    xinyiData   = await xinyiRes.json();
     commentary  = await commRes.json();
     nivData     = await nivRes.json();
-    nkjvData    = await nkjvRes.json();
     tyndaleData = await tynRes.json();
   }
 
@@ -370,9 +370,9 @@
         .join('') || '<p style="color:#aaa">Text not available.</p>';
     }
 
-    const nivVerses  = renderVerses(nivData);
-    const nkjvVerses = renderVerses(nkjvData);
-    const zhVerses   = renderVerses(chineseData, 'zh');
+    const zhVerses    = renderVerses(chineseData, 'zh');
+    const xinyiVerses = renderVerses(xinyiData,   'zh');
+    const nivVerses   = renderVerses(nivData);
 
     main.innerHTML = `
       <div class="commentary">
@@ -389,17 +389,20 @@
       </div>
 
       <div class="lang-tabs">
-        <button class="lang-tab ${activeBible==='niv'?'active':''}"  id="tab-niv"  onclick="switchBible('niv')">NIV</button>
-        <button class="lang-tab ${activeBible==='nkjv'?'active':''}" id="tab-nkjv" onclick="switchBible('nkjv')">NKJV</button>
-        <button class="lang-tab ${activeBible==='zh'?'active':''}"   id="tab-zh"   onclick="switchBible('zh')">
-          <span data-lang="en">Chinese (和合本)</span>
-          <span data-lang="zh" class="zh-font">中文（和合本）</span>
+        <button class="lang-tab ${activeBible==='zh'?'active':''}"    id="tab-zh"    onclick="switchBible('zh')">
+          <span data-lang="en">和合本</span>
+          <span data-lang="zh" class="zh-font">和合本</span>
         </button>
+        <button class="lang-tab ${activeBible==='xinyi'?'active':''}" id="tab-xinyi" onclick="switchBible('xinyi')">
+          <span data-lang="en">新译本</span>
+          <span data-lang="zh" class="zh-font">新译本</span>
+        </button>
+        <button class="lang-tab ${activeBible==='niv'?'active':''}"   id="tab-niv"   onclick="switchBible('niv')">NIV</button>
       </div>
 
-      <div class="bible-panel ${activeBible==='niv'?'active':''}"  id="panel-niv">${nivVerses}</div>
-      <div class="bible-panel ${activeBible==='nkjv'?'active':''}" id="panel-nkjv">${nkjvVerses}</div>
-      <div class="bible-panel ${activeBible==='zh'?'active':''}"   id="panel-zh">${zhVerses}</div>
+      <div class="bible-panel ${activeBible==='zh'?'active':''}"    id="panel-zh">${zhVerses}</div>
+      <div class="bible-panel ${activeBible==='xinyi'?'active':''}" id="panel-xinyi">${xinyiVerses}</div>
+      <div class="bible-panel ${activeBible==='niv'?'active':''}"   id="panel-niv">${nivVerses}</div>
 
       <div class="section-label">
         <span data-lang="en">Resources</span>
