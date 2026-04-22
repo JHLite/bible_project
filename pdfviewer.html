@@ -110,7 +110,11 @@
   async function init() {
     if (!file) { showError(); return; }
     try {
-      pdfDoc = await pdfjsLib.getDocument(file).promise;
+      pdfDoc = await pdfjsLib.getDocument({
+        url: file,
+        cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/',
+        cMapPacked: true,
+      }).promise;
       await renderPage(startPg);
     } catch (e) {
       console.error(e);
