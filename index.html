@@ -204,12 +204,22 @@
     }
   </style>
 </head>
-<body class="ui-en">
+<body class="ui-zh">
+
+<!-- Reading schedule modal -->
+<div id="schedule-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;overflow-y:auto;" onclick="if(event.target===this)closeSchedule()">
+  <div style="background:#fff;max-width:520px;margin:40px auto;padding:28px 24px;position:relative;">
+    <button onclick="closeSchedule()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:#888;">✕</button>
+    <h2 class="zh-font" style="font-size:16px;font-weight:600;margin-bottom:4px;">读经计划</h2>
+    <h2 style="font-size:13px;font-weight:400;color:#888;margin-bottom:20px;">Reading Schedule</h2>
+    <div id="schedule-list" style="font-size:13px;line-height:1.8;"></div>
+  </div>
+</div>
 
 <header>
   <div class="ui-lang-toggle">
-    <button class="ui-lang-btn active" id="btn-en" onclick="setUILang('en')">EN</button>
-    <button class="ui-lang-btn"        id="btn-zh" onclick="setUILang('zh')">中文</button>
+    <button class="ui-lang-btn"        id="btn-en" onclick="setUILang('en')">EN</button>
+    <button class="ui-lang-btn active" id="btn-zh" onclick="setUILang('zh')">中文</button>
   </div>
 
   <div class="date-label" id="header-date"></div>
@@ -229,6 +239,10 @@
       <span data-lang="en">Next →</span>
       <span data-lang="zh" class="zh-font">下一天 →</span>
     </button>
+    <button class="day-btn" onclick="openSchedule()">
+      <span data-lang="en">Schedule</span>
+      <span data-lang="zh" class="zh-font">读经计划</span>
+    </button>
   </div>
 </header>
 
@@ -243,7 +257,7 @@
   let nkjvData     = {};
   let commentary   = {};
   let tyndaleData  = {};
-  let activeBible  = 'niv';
+  let activeBible  = 'zh';
 
   function todayStr() {
     const d = new Date();
@@ -393,6 +407,16 @@
       </div>
 
       <div class="resources">
+        ${tyndaleURL ? `
+        <a class="resource-card" href="${tyndaleURL}" target="_blank">
+          <span class="resource-icon">📚</span>
+          <div>
+            <h3 data-lang="en">Tyndale Commentary — ${entry.book} ${entry.chapter}</h3>
+            <h3 data-lang="zh" class="zh-font">丁道尔注释 — ${entry.bookZh}第${chapterNumZh(entry.chapter)}章</h3>
+            <p data-lang="en">Opens in browser — jumps straight to this chapter.</p>
+            <p data-lang="zh" class="zh-font">在浏览器中打开，直接跳转至本章页码。</p>
+          </div>
+        </a>` : ''}
         <a class="resource-card" href="https://www.youtube.com/watch?v=${entry.youtubeId}" target="_blank">
           <span class="resource-icon">▶</span>
           <div>
@@ -420,16 +444,6 @@
             <p data-lang="zh" class="zh-font">关于今日章节的问答注释。</p>
           </div>
         </a>
-        ${tyndaleURL ? `
-        <a class="resource-card" href="${tyndaleURL}" target="_blank">
-          <span class="resource-icon">📚</span>
-          <div>
-            <h3 data-lang="en">Tyndale Commentary — ${entry.book} ${entry.chapter}</h3>
-            <h3 data-lang="zh" class="zh-font">丁道尔注释 — ${entry.bookZh}第${chapterNumZh(entry.chapter)}章</h3>
-            <p data-lang="en">Opens in browser — jumps straight to this chapter.</p>
-            <p data-lang="zh" class="zh-font">在浏览器中打开，直接跳转至本章页码。</p>
-          </div>
-        </a>` : ''}
       </div>`;
 
     applyUILang();
@@ -464,6 +478,30 @@
     const map = { 'HEB': 'heb', '2JN': '2jo', 'JHN': 'jhn' };
     const [book, ch] = ref.split('.');
     return `${map[book]||book.toLowerCase()}/${ch}/1/`;
+  }
+
+  function openSchedule() {
+    const list = document.getElementById('schedule-list');
+    const isZh = document.body.classList.contains('ui-zh');
+    const dates = Object.keys(rota).sort();
+    const rows = dates.map(date => {
+      const e = rota[date];
+      const d = new Date(date + 'T00:00:00');
+      const dateStr = isZh
+        ? `${d.getMonth()+1}月${d.getDate()}日`
+        : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      const ref = isZh
+        ? `<span class="zh-font">${e.bookZh} 第${e.chapter}章</span>`
+        : `${e.book} ${e.chapter}`;
+      const today = date === todayStr() ? ' style="font-weight:600;background:#f5f5f5;padding:2px 6px;"' : '';
+      return `<div${today}><span style="color:#aaa;min-width:60px;display:inline-block;">${dateStr}</span> ${ref}</div>`;
+    });
+    list.innerHTML = rows.join('');
+    document.getElementById('schedule-modal').style.display = 'block';
+  }
+
+  function closeSchedule() {
+    document.getElementById('schedule-modal').style.display = 'none';
   }
 
   function setUILang(lang) {
