@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Bible Reading · 每日读经</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, serif;
+      background: #fff;
+      color: #111;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid #ddd;
+      padding: 24px 20px 18px;
+      text-align: center;
+      position: relative;
+    }
+
+    .ui-lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .ui-lang-btn {
+      padding: 4px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      background: #fff;
+      color: #666;
+      border: none;
+    }
+
+    .ui-lang-btn.active { background: #111; color: #fff; }
+
+    header .date-label {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 400;
+      color: #111;
+    }
+
+    header .book-tag {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .day-nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .day-btn {
+      background: #fff;
+      border: 1px solid #ccc;
+      color: #333;
+      font-size: 12px;
+      padding: 4px 14px;
+      cursor: pointer;
+    }
+
+    .day-btn:hover { background: #f5f5f5; }
+    .day-btn.current { background: #111; color: #fff; border-color: #111; cursor: default; }
+    .day-btn:disabled { opacity: 0.3; cursor: default; }
+
+    .main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+
+    .no-reading {
+      text-align: center;
+      padding: 60px 20px;
+      color: #888;
+    }
+
+    .no-reading h2 { font-size: 20px; margin-bottom: 10px; font-weight: 400; }
+    .no-reading p  { font-size: 15px; line-height: 1.7; }
+
+    .commentary {
+      border: 1px solid #ddd;
+      border-left: 3px solid #111;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+    }
+
+    .commentary h2 {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .commentary p { font-size: 15px; line-height: 1.8; color: #333; }
+
+    .key-themes { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+
+    .theme-tag {
+      font-size: 11px;
+      padding: 3px 10px;
+      border: 1px solid #ccc;
+      color: #555;
+    }
+
+    .lang-tabs {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .lang-tab {
+      flex: 1;
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-bottom: none;
+      color: #888;
+      font-size: 13px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .lang-tab.active { background: #fff; color: #111; border-bottom: 1px solid #fff; }
+
+    .bible-panel {
+      display: none;
+      border: 1px solid #ddd;
+      border-top: none;
+      padding: 24px 24px 28px;
+    }
+
+    .bible-panel.active { display: block; }
+
+    .loading-text { color: #888; font-size: 14px; font-style: italic; }
+
+    .verse { display: flex; gap: 14px; margin-bottom: 12px; line-height: 1.8; }
+    .verse-num { min-width: 24px; color: #aaa; font-size: 12px; padding-top: 3px; text-align: right; flex-shrink: 0; }
+    .verse-text { font-size: 16px; color: #222; }
+    .verse-text.zh {
+      font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', serif;
+      font-size: 15.5px;
+      line-height: 1.9;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin: 28px 0 12px;
+    }
+
+    .resources { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    @media (max-width: 600px) {
+      .resources { grid-template-columns: 1fr; }
+      .ui-lang-toggle { top: 12px; right: 12px; }
+    }
+
+    .resource-card {
+      border: 1px solid #ddd;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .resource-card:hover { background: #f9f9f9; }
+    .resource-icon { font-size: 20px; flex-shrink: 0; }
+    .resource-card h3 { font-size: 13px; font-weight: bold; color: #111; margin-bottom: 3px; }
+    .resource-card p  { font-size: 12px; color: #888; line-height: 1.5; }
+
+    [data-lang]      { display: none; }
+    span[data-lang]  { display: none; }
+
+    body.ui-en [data-lang="en"]      { display: revert; }
+    body.ui-zh [data-lang="zh"]      { display: revert; }
+    body.ui-en span[data-lang="en"]  { display: inline; }
+    body.ui-zh span[data-lang="zh"]  { display: inline; }
+
+    .zh-font {
+      font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', serif;
+    }
+  </style>
+</head>
+<body class="ui-en">
+
+<header>
+  <div class="ui-lang-toggle">
+    <button class="ui-lang-btn active" id="btn-en" onclick="setUILang('en')">EN</button>
+    <button class="ui-lang-btn"        id="btn-zh" onclick="setUILang('zh')">中文</button>
+  </div>
+
+  <div class="date-label" id="header-date"></div>
+  <h1 id="header-title"></h1>
+  <span class="book-tag" id="header-tag"></span>
+
+  <div class="day-nav">
+    <button class="day-btn" id="btn-prev" onclick="goDay(-1)">
+      <span data-lang="en">← Previous</span>
+      <span data-lang="zh" class="zh-font">← 上一天</span>
+    </button>
+    <button class="day-btn" id="btn-today" onclick="goToday()">
+      <span data-lang="en">Today</span>
+      <span data-lang="zh" class="zh-font">今天</span>
+    </button>
+    <button class="day-btn" id="btn-next" onclick="goDay(1)">
+      <span data-lang="en">Next →</span>
+      <span data-lang="zh" class="zh-font">下一天 →</span>
+    </button>
+  </div>
+</header>
+
+<div class="main" id="main-content"></div>
+
+<script>
+  // ── State ────────────────────────────────────────────────────────────────
+  let currentDate  = todayStr();
+  let rota         = {};
+  let chineseData  = {};
+  let nivData      = {};
+  let nkjvData     = {};
+  let commentary   = {};
+  let activeBible  = 'niv';
+
+  function todayStr() {
+    const d = new Date();
+    return d.toISOString().slice(0, 10);
+  }
+
+  function formatDate(dateStr, lang) {
+    const d = new Date(dateStr + 'T00:00:00');
+    if (lang === 'zh') {
+      return `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日 · ${'日一二三四五六'.split('')[d.getDay()]}`;
+    }
+    return d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  function addDays(dateStr, n) {
+    const d = new Date(dateStr + 'T00:00:00');
+    d.setDate(d.getDate() + n);
+    return d.toISOString().slice(0, 10);
+  }
+
+  // Find nearest rota entry (skip weekends by looking for dates in rota)
+  function nearestRotaDate(dateStr) {
+    if (rota[dateStr]) return dateStr;
+    // look back up to 7 days
+    let d = dateStr;
+    for (let i = 0; i < 7; i++) {
+      d = addDays(d, -1);
+      if (rota[d]) return d;
+    }
+    return null;
+  }
+
+  // ── Load data ────────────────────────────────────────────────────────────
+  async function loadData() {
+    const [rotaRes, zhRes, commRes, nivRes, nkjvRes] = await Promise.all([
+      fetch('data/rota.json'),
+      fetch('data/chinese_bible.json'),
+      fetch('data/commentary.json'),
+      fetch('data/niv.json'),
+      fetch('data/nkjv.json'),
+    ]);
+    rota        = await rotaRes.json();
+    chineseData = await zhRes.json();
+    commentary  = await commRes.json();
+    nivData     = await nivRes.json();
+    nkjvData    = await nkjvRes.json();
+  }
+
+  // ── Render ───────────────────────────────────────────────────────────────
+  async function render() {
+    const main = document.getElementById('main-content');
+
+    // header date
+    document.getElementById('header-date').innerHTML =
+      `<span data-lang="en">${formatDate(currentDate, 'en')}</span>` +
+      `<span data-lang="zh" class="zh-font">${formatDate(currentDate, 'zh')}</span>`;
+
+    const entry = rota[currentDate];
+
+    // nav button states
+    const dates   = Object.keys(rota).sort();
+    const idx     = dates.indexOf(currentDate);
+    document.getElementById('btn-prev').disabled = idx <= 0;
+    document.getElementById('btn-next').disabled = idx >= dates.length - 1 || idx === -1;
+    const onToday = currentDate === todayStr() || currentDate === nearestRotaDate(todayStr());
+    document.getElementById('btn-today').classList.toggle('current', onToday);
+
+    if (!entry) {
+      // Weekend / no reading day
+      const dow = new Date(currentDate + 'T00:00:00').getDay();
+      const isWeekend = dow === 0 || dow === 6;
+      document.getElementById('header-title').innerHTML =
+        `<span data-lang="en">${isWeekend ? 'Rest Day' : 'No Reading Scheduled'}</span>` +
+        `<span data-lang="zh" class="zh-font">${isWeekend ? '安息日' : '今日无安排'}</span>`;
+      document.getElementById('header-tag').innerHTML = '';
+
+      main.innerHTML = `
+        <div class="no-reading">
+          <h2 data-lang="en">Weekend Rest</h2>
+          <h2 data-lang="zh" class="zh-font">周末安息</h2>
+          <p data-lang="en">No reading today — rest, reflect, and come back Monday.</p>
+          <p data-lang="zh" class="zh-font">今日无读经安排，请休息、默想，周一再见。</p>
+        </div>`;
+      applyUILang();
+      return;
+    }
+
+    // Header
+    document.getElementById('header-title').innerHTML =
+      `<span data-lang="en">${entry.book} · Chapter ${entry.chapter}</span>` +
+      `<span data-lang="zh" class="zh-font">${entry.bookZh} · 第${chapterNumZh(entry.chapter)}章</span>`;
+    document.getElementById('header-tag').innerHTML =
+      `<span data-lang="en">New Testament · ${entry.book}</span>` +
+      `<span data-lang="zh" class="zh-font">新约 · ${entry.bookZh}</span>`;
+
+    // Commentary
+    const comm = commentary[entry.ref] || {};
+    const themesEn = (comm.themes_en || []).map(t => `<span class="theme-tag">${t}</span>`).join('');
+    const themesZh = (comm.themes_zh || []).map(t => `<span class="theme-tag zh-font">${t}</span>`).join('');
+
+    const bookKey = entry.ref.split('.')[0];
+    const chStr   = String(entry.chapter);
+
+    function renderVerses(source, cls='') {
+      return ((source[bookKey] || {})[chStr] || [])
+        .map(v => `<div class="verse"><span class="verse-num">${v.v}</span><span class="verse-text${cls ? ' '+cls : ''}">${v.t}</span></div>`)
+        .join('') || '<p style="color:#aaa">Text not available.</p>';
+    }
+
+    const nivVerses  = renderVerses(nivData);
+    const nkjvVerses = renderVerses(nkjvData);
+    const zhVerses   = renderVerses(chineseData, 'zh');
+
+    main.innerHTML = `
+      <div class="commentary">
+        <h2>
+          <span data-lang="en">About This Chapter</span>
+          <span data-lang="zh" class="zh-font">本章简介</span>
+        </h2>
+        <p data-lang="en">${comm.en || ''}</p>
+        <p data-lang="zh" class="zh-font">${comm.zh || ''}</p>
+        <div class="key-themes">
+          <div data-lang="en">${themesEn}</div>
+          <div data-lang="zh">${themesZh}</div>
+        </div>
+      </div>
+
+      <div class="lang-tabs">
+        <button class="lang-tab ${activeBible==='niv'?'active':''}"  id="tab-niv"  onclick="switchBible('niv')">NIV</button>
+        <button class="lang-tab ${activeBible==='nkjv'?'active':''}" id="tab-nkjv" onclick="switchBible('nkjv')">NKJV</button>
+        <button class="lang-tab ${activeBible==='zh'?'active':''}"   id="tab-zh"   onclick="switchBible('zh')">
+          <span data-lang="en">Chinese (和合本)</span>
+          <span data-lang="zh" class="zh-font">中文（和合本）</span>
+        </button>
+      </div>
+
+      <div class="bible-panel ${activeBible==='niv'?'active':''}"  id="panel-niv">${nivVerses}</div>
+      <div class="bible-panel ${activeBible==='nkjv'?'active':''}" id="panel-nkjv">${nkjvVerses}</div>
+      <div class="bible-panel ${activeBible==='zh'?'active':''}"   id="panel-zh">${zhVerses}</div>
+
+      <div class="section-label">
+        <span data-lang="en">Resources</span>
+        <span data-lang="zh" class="zh-font">延伸资源</span>
+      </div>
+
+      <div class="resources">
+        <a class="resource-card" href="https://www.youtube.com/watch?v=${entry.youtubeId}" target="_blank">
+          <span class="resource-icon">▶</span>
+          <div>
+            <h3 data-lang="en">The Bible Project — ${entry.book}</h3>
+            <h3 data-lang="zh" class="zh-font">圣经项目 — ${entry.bookZh}</h3>
+            <p data-lang="en">Visual overview of the book. Great context for today's chapter.</p>
+            <p data-lang="zh" class="zh-font">全书动画概览，帮助理解今日章节背景。</p>
+          </div>
+        </a>
+        <a class="resource-card" href="https://www.blueletterbible.org/niv/${refToBlueLetterPath(entry.ref)}" target="_blank">
+          <span class="resource-icon">📖</span>
+          <div>
+            <h3 data-lang="en">Blue Letter Bible</h3>
+            <h3 data-lang="zh" class="zh-font">蓝字圣经</h3>
+            <p data-lang="en">Interlinear Greek, commentaries, cross-references.</p>
+            <p data-lang="zh" class="zh-font">希腊文对照、注释及经文交叉参考。</p>
+          </div>
+        </a>
+        <a class="resource-card" href="https://www.gotquestions.org/${gqBookSlug(entry.book)}.html" target="_blank">
+          <span class="resource-icon">📘</span>
+          <div>
+            <h3 data-lang="en">Book Overview — ${entry.book}</h3>
+            <h3 data-lang="zh" class="zh-font">全书简介 — ${entry.bookZh}</h3>
+            <p data-lang="en">Who wrote it, why, and what's the big idea.</p>
+            <p data-lang="zh" class="zh-font">作者、背景与全书主旨介绍。</p>
+          </div>
+        </a>
+        <a class="resource-card" href="https://www.gotquestions.org/search-results.html?q=${entry.book.toLowerCase()}+${entry.chapter}#gsc.tab=0&gsc.q=${encodeURIComponent(entry.book.toLowerCase()+' '+entry.chapter)}&gsc.page=1" target="_blank">
+          <span class="resource-icon">💬</span>
+          <div>
+            <h3 data-lang="en">GotQuestions — ${entry.book} ${entry.chapter}</h3>
+            <h3 data-lang="zh" class="zh-font">经文问答 — ${entry.bookZh}第${chapterNumZh(entry.chapter)}章</h3>
+            <p data-lang="en">Questions and answers about today's chapter.</p>
+            <p data-lang="zh" class="zh-font">关于今日章节的问答注释。</p>
+          </div>
+        </a>
+      </div>`;
+
+    applyUILang();
+  }
+
+  // ── Helpers ──────────────────────────────────────────────────────────────
+  function chapterNumZh(n) {
+    const zh = ['一','二','三','四','五','六','七','八','九','十',
+                 '十一','十二','十三','十四','十五','十六','十七','十八','十九','二十'];
+    return zh[n-1] || n;
+  }
+
+  function gqBookSlug(book) {
+    const overrides = {
+      'John':    'Gospel-of-John',
+      'Mark':    'Gospel-of-Mark',
+      'Luke':    'Gospel-of-Luke',
+      'Matthew': 'Gospel-of-Matthew',
+    };
+    return overrides[book] || 'Book-of-' + book.replace(/ /g, '-');
+  }
+
+  function refToBlueLetterPath(ref) {
+    const map = { 'HEB': 'heb', '2JN': '2jo', 'JHN': 'jhn' };
+    const [book, ch] = ref.split('.');
+    return `${map[book]||book.toLowerCase()}/${ch}/1/`;
+  }
+
+  function setUILang(lang) {
+    document.body.classList.remove('ui-en', 'ui-zh');
+    document.body.classList.add('ui-' + lang);
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    switchBible(lang === 'zh' ? 'zh' : 'niv');
+  }
+
+  function applyUILang() {
+    const lang = document.body.classList.contains('ui-zh') ? 'zh' : 'en';
+    setUILang(lang);
+  }
+
+  function switchBible(key) {
+    activeBible = key;
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.bible-panel').forEach(p => p.classList.remove('active'));
+    const tab   = document.getElementById('tab-' + key);
+    const panel = document.getElementById('panel-' + key);
+    if (tab)   tab.classList.add('active');
+    if (panel) panel.classList.add('active');
+  }
+
+  function goToday() {
+    const today = todayStr();
+    if (rota[today]) {
+      currentDate = today;
+    } else {
+      const nearest = nearestRotaDate(today);
+      if (nearest) currentDate = nearest;
+    }
+    render();
+  }
+
+  function goDay(delta) {
+    const dates = Object.keys(rota).sort();
+    const idx   = dates.indexOf(currentDate);
+    let newIdx;
+    if (idx === -1) {
+      // current date not in rota — find nearest
+      newIdx = delta > 0 ? 0 : dates.length - 1;
+    } else {
+      newIdx = idx + delta;
+    }
+    if (newIdx < 0 || newIdx >= dates.length) return;
+    currentDate = dates[newIdx];
+    render();
+  }
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  (async () => {
+    await loadData();
+    // If today has no entry, try to find the most recent past entry
+    if (!rota[currentDate]) {
+      const nearest = nearestRotaDate(currentDate);
+      if (nearest) currentDate = nearest;
+    }
+    render();
+  })();
+</script>
+
+</body>
+</html>
