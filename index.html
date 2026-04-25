@@ -96,6 +96,14 @@
     .no-reading h2 { font-size: 20px; margin-bottom: 10px; font-weight: 400; }
     .no-reading p  { font-size: 15px; line-height: 1.7; }
 
+    .week-review { margin-top: 32px; text-align: left; max-width: 380px; margin-left: auto; margin-right: auto; }
+    .week-review h3 { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #aaa; margin-bottom: 8px; font-weight: 400; }
+    .week-row { display: flex; align-items: center; justify-content: space-between; font-size: 14px; padding: 11px 14px; border-radius: 6px; cursor: pointer; color: #333; border: 1px solid transparent; transition: background .15s, border-color .15s; }
+    .week-row:hover { background: #f5f5f5; border-color: #e0e0e0; }
+    .week-row .wr-day { font-size: 11px; color: #999; min-width: 80px; }
+    .week-row .wr-title { flex: 1; font-weight: 500; padding: 0 10px; }
+    .week-row .wr-arrow { color: #bbb; font-size: 12px; }
+
     .commentary {
       border: 1px solid #ddd;
       border-left: 3px solid #111;
@@ -275,7 +283,23 @@
   function addDays(dateStr, n) {
     const d = new Date(dateStr + 'T00:00:00');
     d.setDate(d.getDate() + n);
-    return d.toISOString().slice(0, 10);
+    return [d.getFullYear(), String(d.getMonth()+1).padStart(2,'0'), String(d.getDate()).padStart(2,'0')].join('-');
+  }
+
+  // Get Mon–Fri dates of the week containing dateStr
+  function thisWeekRotaDates(dateStr) {
+    const d = new Date(dateStr + 'T00:00:00');
+    const dow = d.getDay(); // 0=Sun, 6=Sat
+    const monday = new Date(d);
+    monday.setDate(d.getDate() - (dow === 0 ? 6 : dow - 1));
+    const results = [];
+    for (let i = 0; i < 5; i++) {
+      const day = new Date(monday);
+      day.setDate(monday.getDate() + i);
+      const str = [day.getFullYear(), String(day.getMonth()+1).padStart(2,'0'), String(day.getDate()).padStart(2,'0')].join('-');
+      if (rota[str]) results.push(str);
+    }
+    return results;
   }
 
   // Find nearest rota entry (skip weekends by looking for dates in rota)
@@ -322,26 +346,60 @@
     // nav button states
     const dates   = Object.keys(rota).sort();
     const idx     = dates.indexOf(currentDate);
-    document.getElementById('btn-prev').disabled = idx <= 0;
-    document.getElementById('btn-next').disabled = idx >= dates.length - 1 || idx === -1;
-    const onToday = currentDate === todayStr() || currentDate === nearestRotaDate(todayStr());
+    const prevDay = addDays(currentDate, -1);
+    const nextDay = addDays(currentDate, +1);
+    const firstRotaDate = dates[0];
+    const lastRotaDate  = dates[dates.length - 1];
+    document.getElementById('btn-prev').disabled = currentDate <= firstRotaDate;
+    document.getElementById('btn-next').disabled = currentDate >= lastRotaDate;
+    const onToday = currentDate === todayStr();
     document.getElementById('btn-today').classList.toggle('current', onToday);
 
     if (!entry) {
       // Weekend / no reading day
       const dow = new Date(currentDate + 'T00:00:00').getDay();
-      const isWeekend = dow === 0 || dow === 6;
+      const dayLabelEn = (dow === 0 || dow === 6) ? 'Rest Day' : 'No Reading Scheduled';
+      const dayLabelZh = (dow === 0 || dow === 6) ? '休息日' : '今日无安排';
       document.getElementById('header-title').innerHTML =
-        `<span data-lang="en">${isWeekend ? 'Rest Day' : 'No Reading Scheduled'}</span>` +
-        `<span data-lang="zh" class="zh-font">${isWeekend ? '安息日' : '今日无安排'}</span>`;
+        `<span data-lang="en">${dayLabelEn}</span>` +
+        `<span data-lang="zh" class="zh-font">${dayLabelZh}</span>`;
       document.getElementById('header-tag').innerHTML = '';
+
+      const weekDates = thisWeekRotaDates(currentDate);
+      const weekRowsEn = weekDates.map(d => {
+        const e = rota[d];
+        const dayObj = new Date(d + 'T00:00:00');
+        const dayLabel = dayObj.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+        return `<div class="week-row" onclick="currentDate='${d}';render()" data-lang="en">
+          <span class="wr-day">${dayLabel}</span>
+          <span class="wr-title">${e.book} ${e.chapter}</span>
+          <span class="wr-arrow">→</span>
+        </div>`;
+      }).join('');
+      const weekRowsZh = weekDates.map(d => {
+        const e = rota[d];
+        const dayObj = new Date(d + 'T00:00:00');
+        const dayLabel = `周${'日一二三四五六'.split('')[dayObj.getDay()]} ${dayObj.getMonth()+1}/${dayObj.getDate()}`;
+        return `<div class="week-row zh-font" onclick="currentDate='${d}';render()" data-lang="zh">
+          <span class="wr-day">${dayLabel}</span>
+          <span class="wr-title">${e.bookZh} 第${chapterNumZh(e.chapter)}章</span>
+          <span class="wr-arrow">→</span>
+        </div>`;
+      }).join('');
 
       main.innerHTML = `
         <div class="no-reading">
-          <h2 data-lang="en">Weekend Rest</h2>
-          <h2 data-lang="zh" class="zh-font">周末安息</h2>
-          <p data-lang="en">No reading today — rest, reflect, and come back Monday.</p>
-          <p data-lang="zh" class="zh-font">今日无读经安排，请休息、默想，周一再见。</p>
+          <h2 data-lang="en">${dayLabelEn}</h2>
+          <h2 data-lang="zh" class="zh-font">${dayLabelZh}</h2>
+          <p data-lang="en">Use the arrows above to navigate, or revisit this week's readings below.</p>
+          <p data-lang="zh" class="zh-font">可用上方箭头导航，或点击下方回顾本周读经。</p>
+          ${weekDates.length > 0 ? `
+          <div class="week-review">
+            <h3 data-lang="en">This Week</h3>
+            <h3 data-lang="zh" class="zh-font">本周读经</h3>
+            ${weekRowsEn}
+            ${weekRowsZh}
+          </div>` : ''}
         </div>`;
       applyUILang();
       return;
@@ -496,8 +554,9 @@
       const ref = isZh
         ? `<span class="zh-font">${e.bookZh} 第${e.chapter}章</span>`
         : `${e.book} ${e.chapter}`;
-      const today = date === todayStr() ? ' style="font-weight:600;background:#f5f5f5;padding:2px 6px;"' : '';
-      return `<div${today}><span style="color:#aaa;min-width:60px;display:inline-block;">${dateStr}</span> ${ref}</div>`;
+      const isToday = date === todayStr();
+      const todayStyle = isToday ? 'font-weight:600;background:#f5f5f5;' : '';
+      return `<div onclick="currentDate='${date}';closeSchedule();render()" style="cursor:pointer;padding:4px 6px;border-radius:4px;${todayStyle}" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='${isToday ? '#f5f5f5' : ''}'"><span style="color:#aaa;min-width:60px;display:inline-block;">${dateStr}</span> ${ref}</div>`;
     });
     list.innerHTML = rows.join('');
     document.getElementById('schedule-modal').style.display = 'block';
@@ -531,39 +590,18 @@
   }
 
   function goToday() {
-    const today = todayStr();
-    if (rota[today]) {
-      currentDate = today;
-    } else {
-      const nearest = nearestRotaDate(today);
-      if (nearest) currentDate = nearest;
-    }
+    currentDate = todayStr();
     render();
   }
 
   function goDay(delta) {
-    const dates = Object.keys(rota).sort();
-    const idx   = dates.indexOf(currentDate);
-    let newIdx;
-    if (idx === -1) {
-      // current date not in rota — find nearest
-      newIdx = delta > 0 ? 0 : dates.length - 1;
-    } else {
-      newIdx = idx + delta;
-    }
-    if (newIdx < 0 || newIdx >= dates.length) return;
-    currentDate = dates[newIdx];
+    currentDate = addDays(currentDate, delta);
     render();
   }
 
   // ── Init ─────────────────────────────────────────────────────────────────
   (async () => {
     await loadData();
-    // If today has no entry, try to find the most recent past entry
-    if (!rota[currentDate]) {
-      const nearest = nearestRotaDate(currentDate);
-      if (nearest) currentDate = nearest;
-    }
     render();
   })();
 
